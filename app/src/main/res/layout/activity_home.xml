@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical">
+
+    <!--Home Title-->
+    <TextView
+        android:id="@+id/home_title"
+        android:text="@string/get_active"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+
+    <!--Button - Find a Fitness Zone-->
+    <Button
+        android:id="@+id/find_a_fz"
+        android:text="@string/find_a_fz"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/ic_fz_location"
+        android:drawableStart="@drawable/ic_fz_location"
+        android:drawablePadding="8dp"
+        />
+
+    <!--Button - Health Benefits-->
+    <Button
+        android:id="@+id/health_benefits"
+        android:text="@string/health_benefits"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/ic_health_benefits"
+        android:drawableStart="@drawable/ic_health_benefits"
+        />
+
+    <!--Button - My Workout-->
+    <Button
+        android:id="@+id/my_workout"
+        android:text="@string/my_workout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/ic_my_workout"
+        android:drawableStart="@drawable/ic_my_workout"
+        />
+
+    <!--Button - Fitness Journal-->
+    <Button
+        android:id="@+id/fitness_journal"
+        android:text="@string/fitness_journal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/ic_fitness_journal"
+        android:drawableStart="@drawable/ic_fitness_journal"
+        />
+
+    <!--Button - About My Fitness Zone-->
+    <Button
+        android:id="@+id/about_my_fz_app"
+        android:text="@string/about_my_fz_app"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/ic_about_fz"
+        android:drawableStart="@drawable/ic_about_fz"
+        />
+
+
+
+</LinearLayout>

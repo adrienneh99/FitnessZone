@@ -1,0 +1,31 @@
+<resources>
+
+    <string name="app_name">Fitness Zone</string>
+
+    <!--HomeActivity Strings-->
+    <string name="get_active">GET ACTIVE</string>
+    <string name="find_a_fz">Find a Fitness Zone</string>
+    <string name="health_benefits">Health Benefits</string>
+    <string name="my_workout">My Workout</string>
+    <string name="fitness_journal">Fitness Journal</string>
+    <string name="about_my_fz_app">About My Fitness Zone App</string>
+
+    <!--AboutActivity Strings-->
+    <string name="fz_title">What is a Fitness Zone?</string>
+    <string name="fz_text">Outdoor gyms to build public health...</string>
+    <string name="project_partners_title">Project Partners</string>
+    <string name="project_partners_text">Click a logo to learn more about each Project Partner</string>
+    <string name="developer_title">Developer</string>
+    <string name="developer_text">Click here to learn more about the Developer</string>
+    <string name="developer_button_text">Developer biography.\nLearn more</string>
+
+
+
+    <string name="adrienne_major_linkedin">www.linkedin.com/in/adrienne-major-593a589</string>
+    <string name="tpl">Trust for Public Land</string>
+    <string name="cultivate_health">Cultivate Health</string>
+    <string name="regis">Regis University</string>
+
+
+
+</resources>
