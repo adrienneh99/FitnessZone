@@ -3,6 +3,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -28,7 +29,10 @@
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
-        />
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp" />
 
     <!--Button - Find a Fitness Zone-->
     <Button
@@ -38,10 +42,14 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_marginTop="10dp"
-        android:drawableLeft="@drawable/ic_fz_location"
-        android:drawableStart="@drawable/ic_fz_location"
-        android:drawablePadding="8dp"
-        />
+        android:drawableLeft="@drawable/ic_fz_location_50x75"
+        android:drawableStart="@drawable/ic_fz_location_50x75"
+        android:onClick="openLocationUI"
+        android:textSize="18sp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp" />
 
     <!--Button - Health Benefits-->
     <Button
@@ -51,9 +59,14 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_marginTop="10dp"
-        android:drawableLeft="@drawable/ic_health_benefits"
-        android:drawableStart="@drawable/ic_health_benefits"
-        />
+        android:drawableLeft="@drawable/ic_health_benefits_50x44"
+        android:drawableStart="@drawable/ic_health_benefits_50x44"
+        android:onClick="openHealthBenefitsUI"
+        android:textSize="18sp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp" />
 
     <!--Button - My Workout-->
     <Button
@@ -63,9 +76,14 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_marginTop="10dp"
-        android:drawableLeft="@drawable/ic_my_workout"
-        android:drawableStart="@drawable/ic_my_workout"
-        />
+        android:drawableLeft="@drawable/ic_my_workout_50x75"
+        android:drawableStart="@drawable/ic_my_workout_50x75"
+        android:onClick="openMyWorkoutUI"
+        android:textSize="18sp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp" />
 
     <!--Button - Fitness Journal-->
     <Button
@@ -75,9 +93,14 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_marginTop="10dp"
-        android:drawableLeft="@drawable/ic_fitness_journal"
-        android:drawableStart="@drawable/ic_fitness_journal"
-        />
+        android:drawableLeft="@drawable/ic_fitness_journal_50x59"
+        android:drawableStart="@drawable/ic_fitness_journal_50x59"
+        android:onClick="openFitnessJournalUI"
+        android:textSize="18sp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp" />
 
     <!--Button - About My Fitness Zone-->
     <Button
@@ -87,10 +110,13 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_marginTop="10dp"
-        android:drawableLeft="@drawable/ic_about_fz"
-        android:drawableStart="@drawable/ic_about_fz"
-        />
-
-
+        android:drawableLeft="@drawable/ic_about_fz_50x52"
+        android:drawableStart="@drawable/ic_about_fz_50x52"
+        android:onClick="openAboutUI"
+        android:textSize="18sp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp" />
 
 </LinearLayout>

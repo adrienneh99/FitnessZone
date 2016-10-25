@@ -12,13 +12,10 @@ import android.widget.TextView;
 
 public class AboutActivity extends AppCompatActivity {
 
-    TextView developerView;
-
     ImageButton tplButton;
     ImageButton cultivateHealthButton;
     ImageButton regisButton;
     Button developerBioButton;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +56,7 @@ public class AboutActivity extends AppCompatActivity {
         developerBioButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("www.linkedin.com/in/adrienne-major-593a589"));
+                        Uri.parse("https://www.linkedin.com/in/adrienne-major-593a589"));
                 startActivity(browserIntent);
             }
         });
