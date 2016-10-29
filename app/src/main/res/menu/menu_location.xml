@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="@string/find_a_fz"
+        android:icon="@drawable/ic_fz_location_50x75"
+        app:showAsAction="ifRoom"
+        />
+
+
+</menu>

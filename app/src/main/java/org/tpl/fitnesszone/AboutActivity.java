@@ -5,10 +5,11 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 public class AboutActivity extends AppCompatActivity {
 
@@ -18,11 +19,19 @@ public class AboutActivity extends AppCompatActivity {
     Button developerBioButton;
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_about, menu);
+        return true;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
         Toolbar fzToolbar = (Toolbar) findViewById(R.id.fz_toolbar);
+        fzToolbar.setTitle(R.string.about_my_fz_app);
         setSupportActionBar(fzToolbar);
 
         tplButton = (ImageButton) findViewById(R.id.tpl_button);
@@ -62,4 +71,5 @@ public class AboutActivity extends AppCompatActivity {
         });
 
     }
+
 }

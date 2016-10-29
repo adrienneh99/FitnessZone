@@ -7,7 +7,7 @@ import android.os.Handler;
 
 public class SplashActivity extends AppCompatActivity {
 
-//  Duration of wait in milliseconds where 3000 = 3 seconds
+    // Duration of wait in milliseconds where 3000 = 3 seconds
     private final int SPLASH_DISPLAY_LENGTH = 3000;
 
     @Override
@@ -15,12 +15,12 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-//      Handler to start HomeActivity and close SplashActivity after 3 seconds
+        // Handler to start HomeActivity and close SplashActivity after 3 seconds
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
-//              An intent to start the HomeActivity
+                // An intent to start the HomeActivity
                 Intent intent = new Intent(SplashActivity.this,HomeActivity.class);
                 SplashActivity.this.startActivity(intent);
                 SplashActivity.this.finish();

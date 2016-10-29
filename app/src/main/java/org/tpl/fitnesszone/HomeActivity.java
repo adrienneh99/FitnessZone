@@ -14,34 +14,35 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         Toolbar fzToolbar = (Toolbar) findViewById(R.id.fz_toolbar);
+        fzToolbar.setTitle(R.string.app_name);
         setSupportActionBar(fzToolbar);
     }
 
-//    Called when the user clicks the Find a Fitness Zone Button
+    // Called when the user clicks the Find a Fitness Zone Button
     public void openLocationUI(View view){
         Intent intent = new Intent(HomeActivity.this, LocationActivity.class);
         startActivity(intent);
     }
 
-    //    Called when the user clicks the Health Benefits Button
+    // Called when the user clicks the Health Benefits Button
     public void openHealthBenefitsUI(View view){
         Intent intent = new Intent(HomeActivity.this, HealthBenefitsActivity.class);
         startActivity(intent);
     }
 
-    //    Called when the user clicks the My Workout Button
+    // Called when the user clicks the My Workout Button
     public void openMyWorkoutUI(View view){
         Intent intent = new Intent(HomeActivity.this, MyWorkoutActivity.class);
         startActivity(intent);
     }
 
-    //    Called when the user clicks the Fitness Journal Button
+    // Called when the user clicks the Fitness Journal Button
     public void openFitnessJournalUI(View view){
         Intent intent = new Intent(HomeActivity.this, FitnessJournalActivity.class);
         startActivity(intent);
     }
 
-    //    Called when the user clicks the About Button
+    // Called when the user clicks the About Button
     public void openAboutUI(View view){
         Intent intent = new Intent(HomeActivity.this, AboutActivity.class);
         startActivity(intent);
