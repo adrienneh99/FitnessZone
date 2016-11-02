@@ -9,7 +9,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--ActionBar / App Bar-->
+    <!--Toolbar / ActionBar-->
     <android.support.v7.widget.Toolbar
         android:id="@+id/fz_toolbar"
         android:layout_width="match_parent"
@@ -17,8 +17,7 @@
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        />
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <!--FZ Title-->
     <TextView
@@ -63,6 +62,21 @@
         android:layout_marginRight="16dp"
         android:layout_marginStart="16dp" />
 
+    <!--Project Partners Text-->
+    <TextView
+        android:id="@+id/project_partners_text"
+        android:text="@string/project_partners_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/project_partners_title"
+        android:textStyle="normal|italic"
+        android:textSize="12sp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp" />
+
     <!--TPL Logo Button-->
     <ImageButton
         android:id="@+id/tpl_button"
@@ -92,7 +106,7 @@
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
         android:maxWidth="120dp"
-        android:layout_below="@id/project_partners_title"
+        android:layout_below="@id/project_partners_text"
         android:layout_centerHorizontal="true"
         android:onClick="openCultivateHealthURL"
         android:contentDescription="Cultivate Health Button" />
@@ -108,28 +122,13 @@
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
         android:maxWidth="120dp"
-        android:layout_below="@id/project_partners_title"
+        android:layout_below="@id/project_partners_text"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:onClick="openRegisURL"
         android:contentDescription="Regis University Button"
         android:layout_marginRight="16dp"
         android:layout_marginEnd="16dp" />
-
-    <!--Project Partners Text-->
-    <TextView
-        android:id="@+id/project_partners_text"
-        android:text="@string/project_partners_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_below="@id/tpl_button"
-        android:textStyle="normal|italic"
-        android:textSize="12sp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="16dp" />
 
     <!--Developer Title-->
     <TextView
@@ -140,7 +139,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
-        android:layout_below="@id/project_partners_text"
+        android:layout_below="@id/tpl_button"
         android:layout_marginEnd="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
@@ -176,8 +175,7 @@
         android:layout_toRightOf="@id/developer_logo"
         android:layout_toEndOf="@id/developer_logo"
         android:textSize="12sp"
-        android:onClick="openDeveloperBioURL"
-        />
+        android:onClick="openDeveloperBioURL" />
 
 
 </RelativeLayout>

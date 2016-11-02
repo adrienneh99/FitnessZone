@@ -9,7 +9,7 @@
     android:layout_height="match_parent"
     tools:context="org.tpl.fitnesszone.FitnessJournalActivity">
 
-    <!--ActionBar / App Bar-->
+    <!--Toolbar / ActionBar-->
     <android.support.v7.widget.Toolbar
         android:id="@+id/fz_toolbar"
         android:layout_width="match_parent"

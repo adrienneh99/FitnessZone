@@ -7,8 +7,8 @@ import android.os.Handler;
 
 public class SplashActivity extends AppCompatActivity {
 
-    // Duration of wait in milliseconds where 3000 = 3 seconds
-    private final int SPLASH_DISPLAY_LENGTH = 3000;
+    // Duration of wait in milliseconds where 2000 = 2 seconds
+    private final int SPLASH_DISPLAY_LENGTH = 2000;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
