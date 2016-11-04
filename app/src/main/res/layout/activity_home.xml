@@ -110,6 +110,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
         android:drawableLeft="@drawable/ic_about_fz_50x52"
         android:drawableStart="@drawable/ic_about_fz_50x52"
         android:onClick="openAboutUI"

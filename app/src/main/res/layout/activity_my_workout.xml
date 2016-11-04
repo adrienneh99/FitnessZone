@@ -20,6 +20,126 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         />
 
+    <!--Select Your Workout Title-->
+    <TextView
+        android:id="@+id/select_your_workout_title"
+        android:text="@string/select_your_workout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/fz_toolbar"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp" />
+
+    <!--Cardio Icon Button-->
+    <ImageButton
+        android:id="@+id/cardio_workout_button"
+        android:src="@drawable/ic_workout_cardio"
+        android:background="#00000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:maxWidth="120dp"
+        android:onClick="openCardioWorkoutUI"
+        android:layout_below="@id/select_your_workout_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp" />
+
+    <!--Cardio Workout Title-->
+    <TextView
+        android:id="@+id/cardio_workout_title"
+        android:text="@string/cardio_workout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardio_workout_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp" />
+
+    <!--Arm Icon Button-->
+    <ImageButton
+        android:id="@+id/arm_workout_button"
+        android:src="@drawable/ic_workout_arm"
+        android:background="#00000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:maxWidth="120dp"
+        android:layout_below="@id/select_your_workout_title"
+        android:layout_centerHorizontal="true"
+        android:onClick="openArmWorkoutUI" />
+
+    <!--Arm Workout Title-->
+    <TextView
+        android:id="@+id/arm_workout_title"
+        android:text="@string/arm_workout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/arm_workout_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp" />
+
+    <!--Leg Icon Button-->
+    <ImageButton
+        android:id="@+id/leg_workout_button"
+        android:src="@drawable/ic_workout_leg"
+        android:background="#00000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:maxWidth="120dp"
+        android:layout_below="@id/select_your_workout_title"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="openLegWorkoutUI"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!--Leg Workout Title-->
+    <TextView
+        android:id="@+id/leg_workout_title"
+        android:text="@string/leg_workout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/leg_workout_button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp" />
+
+    <!--Fitness Journal Track Your Workout Title-->
+    <TextView
+        android:id="@+id/fitness_journal_track_your_workout_title"
+        android:text="@string/fitness_journal_track_your_workout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/cardio_workout_title"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp" />
+
+
 
 
 

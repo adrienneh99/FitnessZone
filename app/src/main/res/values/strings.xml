@@ -8,31 +8,41 @@
         \nDecreases risk of chronic disease
         \nHelps you lose weight</string>
     <string name="app_name">Fitness Zone</string>
+    <string name="arm_workout">Arm Workout</string>
     <string name="before_you_start_title">Before You Start</string>
-    <string name="before_you_start_text">Start Slowly</string>
-    <string name="complete_exercise_program">A Complete Exercise Program
-        \nIncludes 3 Types of Activity:</string>
+    <string name="before_you_start_text">- Start slowly. Warm up for 5 to 10 minutes with easy
+        stretching or brisk walking.
+        \n- Take it easy. Moderate exercise can benefit you as much as intense exercise.
+        \n- Read and understand all exercise instructions.</string>
+    <string name="cardio_workout">Cardio Workout</string>
+    <string name="complete_exercise_program">A Complete Exercise Program Includes 3 Types of
+        Activity:</string>
     <string name="cultivate_health">Cultivate Health, Regis University</string>
     <string name="developer_button_text">Developer biography.\nLearn more</string>
     <string name="developer_text">Click here to learn more about the Developer</string>
     <string name="developer_title">Developer</string>
     <string name="find_a_fz">Find a Fitness Zone</string>
-    <string name="fitness_equipment_benefits_button">Fitness Equipment Benefits. Learn More</string>
+    <string name="fitness_equipment_benefits_button">Fitness Equipment Benefits.
+        \nLearn More</string>
     <string name="fitness_journal">Fitness Journal</string>
+    <string name="fitness_journal_track_your_workout">Fitness Journal: Track Your Workout</string>
     <string name="fz_text">In many neighborhoods, places to exercise are too scarce, too far away,
-        or too expensive. The Trust for Public Land’s Fitness Zone® program puts outdoor gyms where
-        they are needed most. Installed in existing parks, Fitness Zone area’s top-quality, durable
+        or too expensive. The Trust for Public Land\'s Fitness Zone® program puts outdoor gyms where
+        they are needed most. Installed in existing parks, Fitness Zone area\'s top-quality, durable
         exercise gear is free and easy to use, appropriate for teens and adults of all levels of
         fitness, and resistant to weather and vandalism. Most important, Fitness Zone areas are
         fun!</string>
     <string name="fz_title">What is a Fitness Zone?</string>
     <string name="get_active">GET ACTIVE</string>
-    <string name="get_active_text">Try to be active every day...</string>
+    <string name="get_active_text">Try to be active every day. Even if you\'ve never exercised or
+        haven\'t exercised in many years, you can benefit from fitness at any age.</string>
     <string name="health_benefits">Health Benefits</string>
+    <string name="leg_workout">Leg Workout</string>
     <string name="my_workout">My Workout</string>
     <string name="project_partners_text">Click a logo to learn more about each Project Partner</string>
     <string name="project_partners_title">Project Partners</string>
     <string name="regis">Regis University</string>
+    <string name="select_your_workout">Select Your Workout</string>
     <string name="strength_building">STRENGTH-BUILDING</string>
     <string name="strength_building_duration">(minimum 10 minutes a day)</string>
     <string name="strength_building_text">Increases strength
