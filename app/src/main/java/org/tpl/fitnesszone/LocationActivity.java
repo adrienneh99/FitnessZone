@@ -1,17 +1,21 @@
 package org.tpl.fitnesszone;
 
-import android.support.v4.app.FragmentActivity;
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
+
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PointOfInterest;
 
-public class LocationActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class LocationActivity extends AppCompatActivity
+        implements OnMapReadyCallback, GoogleMap.OnPoiClickListener {
 
     private GoogleMap mMap;
 
@@ -30,7 +34,6 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
         mapFragment.getMapAsync(this);
     }
 
-
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
@@ -44,10 +47,19 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+        mMap.setOnPoiClickListener(this);
+
         // Marker for Zuni Park and move the camera
         LatLng zuniPark = new LatLng(39.789872, -105.015831);
 
         mMap.addMarker(new MarkerOptions().position(zuniPark).title("Zuni Park"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(zuniPark));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(zuniPark,15));
+    }
+
+    @Override
+    public void onPoiClick(PointOfInterest poi){
+        Toast.makeText(getApplicationContext(), "Clicked: " + poi.name + "\nPlace ID:" +
+                poi.placeId + "\nLatitude:" + poi.latLng.latitude + " Longitude:" +
+                poi.latLng.longitude, Toast.LENGTH_SHORT).show();
     }
 }

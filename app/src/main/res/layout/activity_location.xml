@@ -16,8 +16,7 @@
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        />
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <!--Google Map Element-->
     <fragment
@@ -28,7 +27,6 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="org.tpl.fitnesszone.LocationActivity"
-        />
+        tools:context="org.tpl.fitnesszone.LocationActivity" />
 
 </LinearLayout>
