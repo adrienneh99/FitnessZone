@@ -5,7 +5,14 @@
     android:id="@+id/activity_splash"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@mipmap/ic_launcher_splash_01">
-</LinearLayout>
+    android:orientation="vertical">
 
+    <ImageView
+        android:src="@mipmap/ic_launcher_splash_01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"/>
+
+</LinearLayout>
