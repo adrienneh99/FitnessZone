@@ -1,13 +1,15 @@
-package org.tpl.fitnesszone;
+package org.tpl.fitnesszone.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class WorkoutTrackerActivity extends AppCompatActivity {
+import org.tpl.fitnesszone.R;
+
+public class EquipmentBenefitsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_workout_tracker);
+        setContentView(R.layout.activity_equipment_benefits);
     }
 }

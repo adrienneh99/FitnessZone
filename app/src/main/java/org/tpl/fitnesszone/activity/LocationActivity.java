@@ -1,11 +1,13 @@
-package org.tpl.fitnesszone;
+package org.tpl.fitnesszone.activity;
 
 
+
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 import android.widget.Toast;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -14,6 +16,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PointOfInterest;
+
+import org.tpl.fitnesszone.R;
 
 public class LocationActivity extends AppCompatActivity
         implements OnMapReadyCallback, GoogleMap.OnPoiClickListener {
@@ -53,9 +57,23 @@ public class LocationActivity extends AppCompatActivity
 
         // Marker for Zuni Park and move the camera
         LatLng zuniPark = new LatLng(39.789872, -105.015831);
+        LatLng ariaPark = new LatLng(39.791118, -105.022860);
+        LatLng ariaParkFuture = new LatLng(39.791739, -105.022788);
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED) {
+            mMap.setMyLocationEnabled(true);
+        }
+
 
         mMap.addMarker(new MarkerOptions().position(zuniPark).title("Zuni Park"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(zuniPark,15));
+
+        mMap.addMarker(new MarkerOptions().position(ariaPark).title("Aria Park"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ariaPark,15));
+
+        mMap.addMarker(new MarkerOptions().position(ariaParkFuture).title("Aria Park (Future)"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ariaParkFuture,15));
     }
 
     @Override

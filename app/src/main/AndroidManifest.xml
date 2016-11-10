@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.tpl.fitnesszone">
 
     <!--
@@ -18,7 +20,7 @@
 
         <!-- Splash Activity -->
         <activity
-            android:name=".SplashActivity"
+            android:name=".activity.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +30,7 @@
         </activity>
 
         <!-- Home Activity -->
-        <activity android:name=".HomeActivity">
+        <activity android:name=".activity.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -50,15 +52,15 @@
 
         <!-- Location Activity -->
         <activity
-            android:name=".LocationActivity"
+            android:name=".activity.LocationActivity"
             android:label="@string/title_activity_location">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.tpl.fitnesszone.HomeActivity" />
+                android:value="org.tpl.fitnesszone.activity.HomeActivity" />
         </activity>
 
         <!-- Health Benefits Activity -->
-        <activity android:name=".HealthBenefitsActivity">
+        <activity android:name=".activity.HealthBenefitsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -67,7 +69,7 @@
         </activity>
 
         <!-- Fitness Equipment Benefits Activity -->
-        <activity android:name=".EquipmentBenefitsActivity">
+        <activity android:name=".activity.EquipmentBenefitsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -76,7 +78,7 @@
         </activity>
 
         <!-- Fitness Equipment Excercises Activity -->
-        <activity android:name=".EquipmentExercisesActivity">
+        <activity android:name=".activity.EquipmentExercisesActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -85,7 +87,7 @@
         </activity>
 
         <!-- My Workout Activity -->
-        <activity android:name=".MyWorkoutActivity">
+        <activity android:name=".activity.MyWorkoutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -94,7 +96,7 @@
         </activity>
 
         <!-- Cardio Workout Activity -->
-        <activity android:name=".CardioWorkoutActivity">
+        <activity android:name=".activity.CardioWorkoutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -103,7 +105,7 @@
         </activity>
 
         <!-- Arm Workout Activity -->
-        <activity android:name=".ArmWorkoutActivity">
+        <activity android:name=".activity.ArmWorkoutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -112,7 +114,7 @@
         </activity>
 
         <!-- Leg Workout Activity -->
-        <activity android:name=".LegWorkoutActivity">
+        <activity android:name=".activity.LegWorkoutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -121,7 +123,7 @@
         </activity>
 
         <!-- Fitness Journal Activity -->
-        <activity android:name=".FitnessJournalActivity">
+        <activity android:name=".activity.FitnessJournalActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -130,7 +132,7 @@
         </activity>
 
         <!-- Daily Workout Tracker Activity -->
-        <activity android:name=".WorkoutTrackerActivity">
+        <activity android:name=".activity.WorkoutTrackerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -139,7 +141,7 @@
         </activity>
 
         <!-- About Activity -->
-        <activity android:name=".AboutActivity">
+        <activity android:name=".activity.AboutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 

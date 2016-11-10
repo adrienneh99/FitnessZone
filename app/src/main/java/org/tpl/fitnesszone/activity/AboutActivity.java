@@ -1,4 +1,4 @@
-package org.tpl.fitnesszone;
+package org.tpl.fitnesszone.activity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -10,6 +10,8 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+
+import org.tpl.fitnesszone.R;
 
 public class AboutActivity extends AppCompatActivity {
 

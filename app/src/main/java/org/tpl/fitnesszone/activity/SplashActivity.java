@@ -1,9 +1,11 @@
-package org.tpl.fitnesszone;
+package org.tpl.fitnesszone.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import org.tpl.fitnesszone.R;
 
 public class SplashActivity extends AppCompatActivity {
 

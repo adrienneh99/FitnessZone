@@ -1,7 +1,9 @@
-package org.tpl.fitnesszone;
+package org.tpl.fitnesszone.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import org.tpl.fitnesszone.R;
 
 public class EquipmentExercisesActivity extends AppCompatActivity {
 
