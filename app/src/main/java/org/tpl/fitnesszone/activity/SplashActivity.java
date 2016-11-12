@@ -9,8 +9,8 @@ import org.tpl.fitnesszone.R;
 
 public class SplashActivity extends AppCompatActivity {
 
-    // Duration of wait in milliseconds where 2000 = 2 seconds
-    private final int SPLASH_DISPLAY_LENGTH = 2000;
+    // Duration of wait in milliseconds where 1000 = 1 second
+    private final int SPLASH_DISPLAY_LENGTH = 1000;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
