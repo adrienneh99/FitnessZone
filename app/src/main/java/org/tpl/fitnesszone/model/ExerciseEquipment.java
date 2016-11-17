@@ -1,0 +1,55 @@
+package org.tpl.fitnesszone.model;
+
+import android.graphics.Bitmap;
+
+public class ExerciseEquipment {
+    private String imageName;
+    private String name;
+    private String activityType;
+    private String [] musclesUsed;
+    private String [] healthBenefits;
+
+    ExerciseEquipment() {
+
+    }
+
+    public String getImageName() {
+        return imageName;
+    }
+
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getActivityType() {
+        return activityType;
+    }
+
+    public void setActivityType(String activityType) {
+        this.activityType = activityType;
+    }
+
+    public String[] getMusclesUsed() {
+        return musclesUsed;
+    }
+
+    public void setMusclesUsed(String[] musclesUsed) {
+        this.musclesUsed = musclesUsed;
+    }
+
+    public String[] getHealthBenefits() {
+        return healthBenefits;
+    }
+
+    public void setHealthBenefits(String[] healthBenefits) {
+        this.healthBenefits = healthBenefits;
+    }
+}

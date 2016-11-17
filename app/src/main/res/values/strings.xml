@@ -23,6 +23,7 @@
     <string name="developer_text">Click here to learn more about the Developer</string>
     <string name="developer_title">Developer</string>
     <string name="find_a_fz">Find a Fitness Zone</string>
+    <string name="fitness_equipment_benefits">Fitness Equipment Benefits</string>
     <string name="fitness_equipment_benefits_button">Fitness Equipment Benefits.
         \nLearn More</string>
     <string name="fitness_journal">Fitness Journal</string>
@@ -38,6 +39,7 @@
     <string name="get_active_text">Try to be active every day. Even if you\'ve never exercised or
         haven\'t exercised in many years, you can benefit from fitness at any age.</string>
     <string name="health_benefits">Health Benefits</string>
+    <string name="learn_more">Learn More</string>
     <string-array name="location_array">
         <item>Zuni Park</item>
         <item>Aria (Current)</item>

@@ -1,46 +1,46 @@
 [
   {
-    "image":"@drawable/eq_balance_board_50x35",
+    "imageName":"eq_balance_board_50x35",
     "name":"Balance Board",
     "activityType":"Strength Building"
   },
   {
-    "image":"@drawable/eq_captains_chair_50x90",
+    "imageName":"eq_captains_chair_50x90",
     "name":"Captain's Chair",
     "activityType":"Strength Building"
   },
   {
-    "image":"@drawable/eq_cardio_walker_50x35",
+    "imageName":"eq_cardio_walker_50x35",
     "name":"Cardio Walker",
     "activityType":"Aerobic Exercise"
   },
   {
-    "image":"@drawable/eq_chest_press_50x53",
+    "imageName":"eq_chest_press_50x53",
     "name":"Chest Press",
     "activityType":"Strength Building"
   },
   {
-    "image":"@drawable/eq_chin_up_bar_50x89",
+    "imageName":"eq_chin_up_bar_50x89",
     "name":"Chin-Up Bar",
     "activityType":"Strength Building"
   },
   {
-    "image":"@drawable/eq_elliptical_50x68",
+    "imageName":"eq_elliptical_50x68",
     "name":"Elliptical",
     "activityType":"Aerobic Exercise"
   },
   {
-    "image":"@drawable/eq_leg_extension_50x56",
+    "imageName":"eq_leg_extension_50x56",
     "name":"Leg Extension",
     "activityType":"Strength Building"
   },
   {
-    "image":"@drawable/eq_plyometric_box_50x50",
+    "imageName":"eq_plyometric_box_50x50",
     "name":"Plyometric Box",
     "activityType":"Strength Building"
   },
   {
-    "image":"@drawable/eq_push_up_50x54",
+    "imageName":"eq_push_up_50x54",
     "name":"Push-Up",
     "activityType":"Strength Building"
   }

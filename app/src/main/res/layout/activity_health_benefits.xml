@@ -242,7 +242,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"/>
 
-            <!--Fitness Equipment Icon and Button-->
+            <!--Fitness ExerciseEquipment Icon and Button-->
             <TableRow
                 android:weightSum="1">
                 <ImageView
@@ -263,11 +263,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight=".35"
                     android:textSize="12sp"
-                    android:padding="3dp" />
+                    android:padding="3dp"
+                    android:onClick="openEquipmentBenefitsUI" />
             </TableRow>
         </TableLayout>
 
     </ScrollView>
-
 
 </LinearLayout>
