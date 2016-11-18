@@ -1,11 +1,11 @@
 package org.tpl.fitnesszone.model;
 
-import android.graphics.Bitmap;
 
 public class ExerciseEquipment {
     private String imageName;
     private String name;
     private String activityType;
+    private String [] activityTypeDetail;
     private String [] musclesUsed;
     private String [] healthBenefits;
 
@@ -35,6 +35,14 @@ public class ExerciseEquipment {
 
     public void setActivityType(String activityType) {
         this.activityType = activityType;
+    }
+
+    public String [] getActivityTypeDetail() {
+        return activityTypeDetail;
+    }
+
+    public void setActivityTypeDetail(String [] activityTypeDetail) {
+        this.activityTypeDetail = activityTypeDetail;
     }
 
     public String[] getMusclesUsed() {

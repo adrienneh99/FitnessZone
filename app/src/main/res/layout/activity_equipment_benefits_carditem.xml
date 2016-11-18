@@ -3,26 +3,36 @@
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/equipment_benefits_carditem"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:elevation="100dp"
-    card_view:cardCornerRadius="8dp" >
+    android:elevation="8dp"
+    card_view:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true" >
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/equipment_image"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:paddingTop="16dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
 
         <TextView
             android:id="@+id/equipment_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/equipment_image"
+            android:layout_alignTop="@id/equipment_image"
             android:paddingTop="24dp"
             android:paddingBottom="16dp"
             android:paddingRight="16dp"
@@ -33,6 +43,9 @@
             android:id="@+id/activity_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/equipment_image"
+            android:layout_below="@id/equipment_name"
+            android:layout_alignLeft="@id/equipment_name"
             android:paddingBottom="16dp"
             android:paddingRight="16dp"
             android:paddingLeft="16dp"
@@ -43,9 +56,14 @@
             android:text="@string/learn_more"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
             android:padding="8dp"
             android:onClick="openEquipmentExerciseUI"/>
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </android.support.v7.widget.CardView>
+

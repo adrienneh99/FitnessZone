@@ -10,15 +10,11 @@ import com.google.gson.Gson;
 import org.tpl.fitnesszone.R;
 import org.tpl.fitnesszone.adapter.RVAdapter;
 import org.tpl.fitnesszone.model.ExerciseEquipment;
-import org.tpl.fitnesszone.model.Location;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
 
 public class EquipmentBenefitsActivityRV extends AppCompatActivity {
 
@@ -45,7 +41,7 @@ public class EquipmentBenefitsActivityRV extends AppCompatActivity {
 
     private void initializeData() {
 
-        // Loading the locations from the json file in the raw resource folder
+        // Loading the equipment info from the json file in the raw resource folder
         Gson gson = new Gson();
         InputStream inputStream = getResources().openRawResource(R.raw.equipment);
         Reader rd = new BufferedReader(new InputStreamReader(inputStream));

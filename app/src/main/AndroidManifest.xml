@@ -95,7 +95,7 @@
             </intent-filter>
         </activity>
 
-        <!-- Fitness ExerciseEquipment Excercises Activity -->
+        <!-- Fitness Equipment Exercises Activity -->
         <activity android:name=".activity.EquipmentExercisesActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

@@ -2,46 +2,82 @@
   {
     "imageName":"eq_balance_board_50x35",
     "name":"Balance Board",
-    "activityType":"Strength Building"
+    "activityType":"Strength Building",
+    "activityTypeDetail":["• Increases strength", "• Improves balance", "• Increases bone density"],
+    "musclesUsed":[],
+    "healthBenefits":[]
   },
   {
     "imageName":"eq_captains_chair_50x90",
     "name":"Captain's Chair",
-    "activityType":"Strength Building"
+    "activityType":"Strength Building",
+    "activityTypeDetail":["• Increases strength", "• Improves balance", "• Increases bone density"],
+    "musclesUsed":[],
+    "healthBenefits":[]
   },
   {
     "imageName":"eq_cardio_walker_50x35",
     "name":"Cardio Walker",
-    "activityType":"Aerobic Exercise"
+    "activityType":"Aerobic Exercise",
+    "activityTypeDetail":["• Raises your heart rate",
+      "• Uses the large muscles of the body (arms, legs, back)",
+      "• Decreases risk of chronic disease",
+      "• Helps you lose weight"],
+    "musclesUsed":[],
+    "healthBenefits":[]
   },
   {
     "imageName":"eq_chest_press_50x53",
     "name":"Chest Press",
-    "activityType":"Strength Building"
+    "activityType":"Strength Building",
+    "activityTypeDetail":["• Increases strength", "• Improves balance", "• Increases bone density"],
+    "musclesUsed":[],
+    "healthBenefits":[]
   },
   {
     "imageName":"eq_chin_up_bar_50x89",
     "name":"Chin-Up Bar",
-    "activityType":"Strength Building"
+    "activityType":"Strength Building",
+    "activityTypeDetail":["• Increases strength", "• Improves balance", "• Increases bone density"],
+    "musclesUsed":[],
+    "healthBenefits":[]
   },
   {
     "imageName":"eq_elliptical_50x68",
     "name":"Elliptical",
-    "activityType":"Aerobic Exercise"
+    "activityType":"Aerobic Exercise",
+    "activityTypeDetail":["• Raises your heart rate",
+      "• Uses the large muscles of the body (arms, legs, back)",
+      "• Decreases risk of chronic disease",
+      "• Helps you lose weight"],
+    "musclesUsed":["Hamstrings", "Quadriceps", "Gluteus Maximus", "Chest", "Biceps", "Triceps", "Abdominal Muscles"],
+    "healthBenefits":[]
   },
   {
     "imageName":"eq_leg_extension_50x56",
     "name":"Leg Extension",
-    "activityType":"Strength Building"
+    "activityType":"Strength Building",
+    "activityTypeDetail":["• Increases strength", "• Improves balance", "• Increases bone density"],
+    "musclesUsed":[],
+    "healthBenefits":[]
   },
   {
     "imageName":"eq_plyometric_box_50x50",
     "name":"Plyometric Box",
-    "activityType":"Strength Building"
+    "activityType":"Strength Building",
+    "activityTypeDetail":["• Increases strength", "• Improves balance", "• Increases bone density"],
+    "musclesUsed":[],
+    "healthBenefits":[]
   },
   {
     "imageName":"eq_push_up_50x54",
     "name":"Push-Up",
-    "activityType":"Strength Building"
+    "activityType":"Strength Building",
+    "activityTypeDetail":["• Increases strength", "• Improves balance", "• Increases bone density"],
+    "musclesUsed":["Chest (Pectoralis Major)", "Upper arms", "Forearms", "Hand muscles", "Abdominals"],
+    "healthBenefits":["• The Push-Up bar can enhance upper body strength, core strength, and improve bone mass.",
+      "• Push-ups can help make functional activities easier, such as getting out of a chair, moving heavy objects, and performing other household chores.",
+      "• Push-ups can improve your athletic performance.",
+      "• Weight-bearing activities such as push-ups can help maintain and improve your bone mass; helping your bones stay healthy and strong!"]
   }
 ]

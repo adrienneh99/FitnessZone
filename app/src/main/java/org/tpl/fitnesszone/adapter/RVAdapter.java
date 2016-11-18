@@ -13,7 +13,6 @@ import org.tpl.fitnesszone.R;
 import org.tpl.fitnesszone.model.ExerciseEquipment;
 import org.tpl.fitnesszone.util.ResourceUtils;
 
-import java.util.List;
 
 public class RVAdapter extends RecyclerView.Adapter<RVAdapter.EquipmentViewHolder> {
 
@@ -37,7 +36,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.EquipmentViewHolde
         }
     }
 
-    // Declare a list to hold equipment objects
+    // Declare an array to hold equipment objects
     ExerciseEquipment[] equipmentList;
 
     // Add a constructor
