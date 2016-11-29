@@ -1,5 +1,6 @@
 package org.tpl.fitnesszone.adapter;
 
+import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,8 +9,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import org.tpl.fitnesszone.R;
+import org.tpl.fitnesszone.activity.EquipmentExercisesActivity;
 import org.tpl.fitnesszone.model.ExerciseEquipment;
 import org.tpl.fitnesszone.util.ResourceUtils;
 
@@ -17,7 +18,7 @@ import org.tpl.fitnesszone.util.ResourceUtils;
 public class RVAdapter extends RecyclerView.Adapter<RVAdapter.EquipmentViewHolder> {
 
     // Create a class to hold the exact set of views and initialize the views
-    public static class EquipmentViewHolder extends RecyclerView.ViewHolder {
+    public class EquipmentViewHolder extends RecyclerView.ViewHolder {
 
         CardView cv;
         ImageView equipmentImage;
@@ -61,9 +62,23 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.EquipmentViewHolde
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(EquipmentViewHolder equipmentViewHolder, int i) {
-        equipmentViewHolder.equipmentImage.setImageResource(ResourceUtils.getResourceId(equipmentList[i].getImageName(), R.drawable.class));
+        final ExerciseEquipment exerciseEquipment = equipmentList[i];
+
+        equipmentViewHolder.equipmentImage.setImageResource(ResourceUtils
+                .getResourceId(equipmentList[i].getImageName(), R.drawable.class));
         equipmentViewHolder.equipmentName.setText(equipmentList[i].getName());
         equipmentViewHolder.activityType.setText(equipmentList[i].getActivityType());
+
+        equipmentViewHolder.learnMoreButton.setOnClickListener(new View.OnClickListener() {
+            // Called when the user clicks the Learn More Button
+            @Override
+            public void onClick (View view){
+                Intent intent = new Intent(view.getContext(),
+                        EquipmentExercisesActivity.class);
+                intent.putExtra("id",exerciseEquipment);
+                view.getContext().startActivity(intent);
+            }
+        });
     }
 
     // Return the size of the Exercise Equipment list

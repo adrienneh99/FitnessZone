@@ -4,17 +4,16 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-
+import android.support.v7.widget.Toolbar;
 import com.google.gson.Gson;
-
 import org.tpl.fitnesszone.R;
 import org.tpl.fitnesszone.adapter.RVAdapter;
 import org.tpl.fitnesszone.model.ExerciseEquipment;
-
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
+
 
 public class EquipmentBenefitsActivityRV extends AppCompatActivity {
 
@@ -26,8 +25,11 @@ public class EquipmentBenefitsActivityRV extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_equipment_benefits_recyclerview);
+
+        Toolbar fzToolbar = (Toolbar) findViewById(R.id.fz_toolbar);
+        fzToolbar.setTitle(R.string.fitness_equipment_benefits);
+        setSupportActionBar(fzToolbar);
 
         recyclerView = (RecyclerView) findViewById(R.id.equipment_benefits_recycler_view);
 
@@ -40,7 +42,6 @@ public class EquipmentBenefitsActivityRV extends AppCompatActivity {
     }
 
     private void initializeData() {
-
         // Loading the equipment info from the json file in the raw resource folder
         Gson gson = new Gson();
         InputStream inputStream = getResources().openRawResource(R.raw.equipment);

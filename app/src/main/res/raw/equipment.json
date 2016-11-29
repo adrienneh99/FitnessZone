@@ -50,7 +50,8 @@
       "• Uses the large muscles of the body (arms, legs, back)",
       "• Decreases risk of chronic disease",
       "• Helps you lose weight"],
-    "musclesUsed":["Hamstrings", "Quadriceps", "Gluteus Maximus", "Chest", "Biceps", "Triceps", "Abdominal Muscles"],
+    "musclesUsed":["Hamstrings", "Quadriceps", "Gluteus Maximus", "Chest", "Biceps", "Triceps",
+      "Abdominal Muscles"],
     "healthBenefits":[]
   },
   {
