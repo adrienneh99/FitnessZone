@@ -22,7 +22,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.EquipmentViewHolde
 
         CardView cv;
         ImageView equipmentImage;
-        TextView equipmentName;
+        TextView exerciseName;
         TextView activityType;
         Button learnMoreButton;
 
@@ -31,7 +31,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.EquipmentViewHolde
             super(itemView);
             cv = (CardView)itemView.findViewById(R.id.equipment_benefits_cardview);
             equipmentImage = (ImageView)itemView.findViewById(R.id.equipment_image);
-            equipmentName = (TextView)itemView.findViewById(R.id.equipment_name);
+            exerciseName = (TextView)itemView.findViewById(R.id.exercise_name);
             activityType = (TextView)itemView.findViewById(R.id.activity_type);
             learnMoreButton = (Button)itemView.findViewById(R.id.learn_more_button);
         }
@@ -66,7 +66,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.EquipmentViewHolde
 
         equipmentViewHolder.equipmentImage.setImageResource(ResourceUtils
                 .getResourceId(equipmentList[i].getImageName(), R.drawable.class));
-        equipmentViewHolder.equipmentName.setText(equipmentList[i].getName());
+        equipmentViewHolder.exerciseName.setText(equipmentList[i].getExerciseName());
         equipmentViewHolder.activityType.setText(equipmentList[i].getActivityType());
 
         equipmentViewHolder.learnMoreButton.setOnClickListener(new View.OnClickListener() {

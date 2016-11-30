@@ -28,7 +28,7 @@ public class EquipmentBenefitsActivityRV extends AppCompatActivity {
         setContentView(R.layout.activity_equipment_benefits_recyclerview);
 
         Toolbar fzToolbar = (Toolbar) findViewById(R.id.fz_toolbar);
-        fzToolbar.setTitle(R.string.fitness_equipment_benefits);
+        fzToolbar.setTitle(R.string.fitness_equipment_and_exercises);
         setSupportActionBar(fzToolbar);
 
         recyclerView = (RecyclerView) findViewById(R.id.equipment_benefits_recycler_view);

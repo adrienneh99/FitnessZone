@@ -10,7 +10,7 @@ import org.tpl.fitnesszone.R;
 public class EquipmentBenefitsActivityCV extends AppCompatActivity {
 
     ImageView equipmentImage;
-    TextView equipmentName;
+    TextView exerciseName;
     TextView activityType;
 
     @Override
@@ -19,7 +19,7 @@ public class EquipmentBenefitsActivityCV extends AppCompatActivity {
         setContentView(R.layout.activity_equipment_benefits_cardview);
 
         equipmentImage = (ImageView)findViewById(R.id.equipment_image);
-        equipmentName = (TextView)findViewById(R.id.equipment_name);
+        exerciseName = (TextView)findViewById(R.id.exercise_name);
         activityType = (TextView)findViewById(R.id.activity_type);
     }
 }
