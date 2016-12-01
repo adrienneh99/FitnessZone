@@ -8,11 +8,13 @@
     android:orientation="vertical">
 
     <ImageView
-        android:src="@mipmap/ic_launcher_splash_01"
+        android:src="@mipmap/ic_launcher_fz"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingLeft="64dp"
+        android:paddingRight="64dp"
         android:layout_gravity="center"
         android:adjustViewBounds="true"
-        android:scaleType="centerInside"/>
+        android:scaleType="fitCenter"/>
 
 </LinearLayout>

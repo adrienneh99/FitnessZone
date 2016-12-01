@@ -7,7 +7,7 @@ import android.os.Handler;
 
 import org.tpl.fitnesszone.R;
 
-public class SplashActivity extends AppCompatActivity {
+public class LaunchActivity extends AppCompatActivity {
 
     // Duration of wait in milliseconds where 1000 = 1 second
     private final int SPLASH_DISPLAY_LENGTH = 1000;
@@ -15,17 +15,17 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_launch);
 
-        // Handler to start HomeActivity and close SplashActivity after 3 seconds
+        // Handler to start HomeActivity and close LaunchActivity
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
                 // An intent to start the HomeActivity
-                Intent intent = new Intent(SplashActivity.this,HomeActivity.class);
-                SplashActivity.this.startActivity(intent);
-                SplashActivity.this.finish();
+                Intent intent = new Intent(LaunchActivity.this,HomeActivity.class);
+                LaunchActivity.this.startActivity(intent);
+                LaunchActivity.this.finish();
 
             }
         }, SPLASH_DISPLAY_LENGTH);
