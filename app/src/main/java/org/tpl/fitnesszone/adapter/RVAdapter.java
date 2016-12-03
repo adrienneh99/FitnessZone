@@ -62,6 +62,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.EquipmentViewHolde
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(EquipmentViewHolder equipmentViewHolder, int i) {
+
         final ExerciseEquipment exerciseEquipment = equipmentList[i];
 
         equipmentViewHolder.equipmentImage.setImageResource(ResourceUtils
@@ -73,8 +74,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.EquipmentViewHolde
             // Called when the user clicks the Learn More Button
             @Override
             public void onClick (View view){
-                Intent intent = new Intent(view.getContext(),
-                        EquipmentExercisesActivity.class);
+                Intent intent = new Intent(view.getContext(), EquipmentExercisesActivity.class);
                 intent.putExtra("id",exerciseEquipment);
                 view.getContext().startActivity(intent);
             }

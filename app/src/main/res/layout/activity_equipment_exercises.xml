@@ -20,27 +20,75 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-    <!--Exercise Title-->
-    <TextView
-        android:id="@+id/exercise_title"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="20dp" />
+        android:fillViewport="true" >
 
-    <!--Exercise Equipment Image-->
-    <ImageView
-        android:id="@id/equipment_image"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter" />
+        <!--Exercise Name-->
+        <TextView
+            android:id="@+id/exercise_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" />
 
+        <!--Exercise Equipment Image-->
+        <ImageView
+            android:id="@+id/equipment_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/exercise_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
 
+        <!--Activity Type-->
+        <TextView
+            android:id="@+id/activity_type"
+            android:text="@string/type_of_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/equipment_image"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" />
 
+        <!--Exercise Activity Type-->
+        <TextView
+            android:id="@+id/exercise_activity_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/activity_type"
+            android:layout_below="@id/equipment_image"
+            android:layout_toRightOf="@id/activity_type"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" />
 
+        <!--Muscles Used-->
+        <TextView
+            android:id="@+id/muscles_used"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/activity_type"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" />
+
+        <!--Health Benefits-->
+        <TextView
+            android:id="@+id/health_benefits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/muscles_used"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" />
+
+    </ScrollView>
 
 </LinearLayout>

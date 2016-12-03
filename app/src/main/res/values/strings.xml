@@ -50,10 +50,11 @@
     <string name="lbs">(lbs)</string>
     <string name="leg_workout">Leg Workout</string>
     <string name="monday">Monday</string>
-    <string name="my_fitness_goal">My Fitness Goal:</string>
+    <string name="muscles_used">Muscles Used</string>
+    <string name="my_fitness_goal">My Fitness Goal</string>
     <string name="my_progress">My Progress</string>
     <string name="my_workout">My Workout</string>
-    <string name="number_of_workouts_tracked">Number of Workouts Tracked:</string>
+    <string name="number_of_workouts_tracked">Number of Workouts Tracked</string>
     <string name="project_partners_text">Click a logo to learn more about each Project Partner</string>
     <string name="project_partners_title">Project Partners</string>
     <string name="recent_activity">Recent Activity</string>
@@ -74,6 +75,7 @@
     <string name="title_activity_location">Map</string>
     <string name="tpl">The Trust for Public Land</string>
     <string name="tuesday">Tuesday</string>
+    <string name="type_of_activity">Type of Activity</string>
     <string name="wednesday">Wednesday</string>
     <string name="weight">Weight:</string>
 

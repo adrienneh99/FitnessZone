@@ -45,6 +45,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginStart="16dp">
+
         <ImageButton
             android:id="@+id/cardio_workout_button"
             android:src="@drawable/ic_workout_cardio"
@@ -57,6 +58,7 @@
             android:scaleType="fitCenter"
             android:onClick="openCardioWorkoutUI"
             android:layout_weight="1" />
+
         <ImageButton
             android:id="@+id/arm_workout_button"
             android:src="@drawable/ic_workout_arm"
@@ -69,6 +71,7 @@
             android:scaleType="fitCenter"
             android:onClick="openArmWorkoutUI"
             android:layout_weight="1" />
+
         <ImageButton
             android:id="@+id/leg_workout_button"
             android:src="@drawable/ic_workout_leg"
@@ -81,6 +84,7 @@
             android:scaleType="fitCenter"
             android:onClick="openLegWorkoutUI"
             android:layout_weight="1" />
+
     </LinearLayout>
 
     <!--Cardio Arm and Leg Workout Title-->
