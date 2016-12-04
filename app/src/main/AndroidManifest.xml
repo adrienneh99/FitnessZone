@@ -69,7 +69,7 @@
         </activity>
 
         <!-- Fitness Equipment Benefits Activity Recycler View -->
-        <activity android:name=".activity.EquipmentBenefitsActivityRV">
+        <activity android:name=".activity.EquipmentExerciseListActivityRV">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -78,7 +78,7 @@
         </activity>
 
         <!-- Fitness Equipment Benefits Activity Card View -->
-        <activity android:name=".activity.EquipmentBenefitsActivityCV">
+        <activity android:name=".activity.EquipmentExerciseListActivityCV">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -87,7 +87,7 @@
         </activity>
 
         <!-- Fitness Equipment Benefits Activity -->
-        <activity android:name=".activity.EquipmentBenefitsActivity">
+        <activity android:name=".activity.EquipmentExerciseListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -96,7 +96,7 @@
         </activity>
 
         <!-- Fitness Equipment Exercises Activity -->
-        <activity android:name=".activity.EquipmentExercisesActivity">
+        <activity android:name=".activity.EquipmentExerciseDetailActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 

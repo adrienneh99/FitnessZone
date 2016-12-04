@@ -22,7 +22,7 @@ public class HealthBenefitsActivity extends AppCompatActivity {
 
     // Called when the user clicks the Fitness Equipment Benefits Button
     public void openEquipmentBenefitsUI(View view){
-        Intent intent = new Intent(HealthBenefitsActivity.this, EquipmentBenefitsActivityRV.class);
+        Intent intent = new Intent(HealthBenefitsActivity.this, EquipmentExerciseListActivityRV.class);
         startActivity(intent);
     }
 

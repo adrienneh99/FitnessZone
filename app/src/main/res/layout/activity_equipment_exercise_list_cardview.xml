@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context="org.tpl.fitnesszone.activity.EquipmentBenefitsActivity">
+    tools:context="org.tpl.fitnesszone.activity.EquipmentExerciseListActivity">
 
     <android.support.v7.widget.CardView
         android:id="@+id/equipment_benefits_cardview"

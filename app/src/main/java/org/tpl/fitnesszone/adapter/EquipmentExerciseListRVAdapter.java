@@ -10,12 +10,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import org.tpl.fitnesszone.R;
-import org.tpl.fitnesszone.activity.EquipmentExercisesActivity;
-import org.tpl.fitnesszone.model.ExerciseEquipment;
+import org.tpl.fitnesszone.activity.EquipmentExerciseDetailActivity;
+import org.tpl.fitnesszone.model.EquipmentExercise;
 import org.tpl.fitnesszone.util.ResourceUtils;
 
 
-public class RVAdapter extends RecyclerView.Adapter<RVAdapter.EquipmentViewHolder> {
+public class EquipmentExerciseListRVAdapter extends RecyclerView.Adapter<EquipmentExerciseListRVAdapter.EquipmentViewHolder> {
 
     // Create a class to hold the exact set of views and initialize the views
     public class EquipmentViewHolder extends RecyclerView.ViewHolder {
@@ -37,11 +37,11 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.EquipmentViewHolde
         }
     }
 
-    // Declare an array to hold equipment objects
-    ExerciseEquipment[] equipmentList;
+    // Declare an array to hold equipmentExercise objects
+    EquipmentExercise[] equipmentList;
 
     // Add a constructor
-    public RVAdapter(ExerciseEquipment[] equipmentList) {
+    public EquipmentExerciseListRVAdapter(EquipmentExercise[] equipmentList) {
         this.equipmentList = equipmentList;
     }
 
@@ -54,7 +54,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.EquipmentViewHolde
     @Override
     public EquipmentViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.activity_equipment_benefits_cardview, viewGroup, false);
+                .inflate(R.layout.activity_equipment_exercise_list_cardview, viewGroup, false);
         EquipmentViewHolder evh = new EquipmentViewHolder(v);
         return evh;
     }
@@ -63,7 +63,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.EquipmentViewHolde
     @Override
     public void onBindViewHolder(EquipmentViewHolder equipmentViewHolder, int i) {
 
-        final ExerciseEquipment exerciseEquipment = equipmentList[i];
+        final EquipmentExercise equipmentExercise = equipmentList[i];
 
         equipmentViewHolder.equipmentImage.setImageResource(ResourceUtils
                 .getResourceId(equipmentList[i].getImageName(), R.drawable.class));
@@ -74,8 +74,8 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.EquipmentViewHolde
             // Called when the user clicks the Learn More Button
             @Override
             public void onClick (View view){
-                Intent intent = new Intent(view.getContext(), EquipmentExercisesActivity.class);
-                intent.putExtra("id",exerciseEquipment);
+                Intent intent = new Intent(view.getContext(), EquipmentExerciseDetailActivity.class);
+                intent.putExtra("id", equipmentExercise);
                 view.getContext().startActivity(intent);
             }
         });

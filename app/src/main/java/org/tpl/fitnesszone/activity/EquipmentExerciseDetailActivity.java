@@ -6,24 +6,24 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
 import org.tpl.fitnesszone.R;
-import org.tpl.fitnesszone.model.ExerciseEquipment;
+import org.tpl.fitnesszone.model.EquipmentExercise;
 
-public class EquipmentExercisesActivity extends AppCompatActivity {
+public class EquipmentExerciseDetailActivity extends AppCompatActivity {
 
-    // Declare an equipment object
-    ExerciseEquipment equipment;
+    // Declare an equipmentExercise object
+    EquipmentExercise equipment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_equipment_exercises);
+        setContentView(R.layout.activity_equipment_exercise_detail);
 
         Toolbar fzToolbar = (Toolbar) findViewById(R.id.fz_toolbar);
         fzToolbar.setTitle(R.string.fitness_equipment_exercises);
         setSupportActionBar(fzToolbar);
 
         Intent intent = getIntent();
-        ExerciseEquipment equipment = (ExerciseEquipment) intent.getParcelableExtra("id");
+        EquipmentExercise equipment = (EquipmentExercise) intent.getParcelableExtra("id");
     }
 
 

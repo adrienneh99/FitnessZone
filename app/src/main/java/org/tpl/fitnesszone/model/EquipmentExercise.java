@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 
-public class ExerciseEquipment implements Parcelable {
+public class EquipmentExercise implements Parcelable {
 
     private String imageName;
     private String exerciseName;
@@ -16,7 +16,7 @@ public class ExerciseEquipment implements Parcelable {
     private String [] instructions;
     private String [] exerciseTips;
 
-    ExerciseEquipment() {
+    EquipmentExercise() {
 
     }
 
@@ -93,7 +93,7 @@ public class ExerciseEquipment implements Parcelable {
     }
 
     // Parcelable implementation
-    public ExerciseEquipment(Parcel in) {
+    public EquipmentExercise(Parcel in) {
         this.imageName = in.readString();
         this.exerciseName = in.readString();
         this.equipmentName = in.readString();
@@ -130,12 +130,12 @@ public class ExerciseEquipment implements Parcelable {
     // Interface that must be implemented and provided as a public CREATOR field that
     // generates instances of your Parcelable class from a Parcel
     public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
-        public ExerciseEquipment createFromParcel(Parcel in) {
-            return new ExerciseEquipment(in);
+        public EquipmentExercise createFromParcel(Parcel in) {
+            return new EquipmentExercise(in);
         }
 
-        public ExerciseEquipment[] newArray(int size) {
-            return new ExerciseEquipment[size];
+        public EquipmentExercise[] newArray(int size) {
+            return new EquipmentExercise[size];
         }
     };
 

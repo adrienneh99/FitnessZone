@@ -5,11 +5,11 @@ import android.os.Bundle;
 import org.tpl.fitnesszone.R;
 
 
-public class EquipmentBenefitsActivity extends AppCompatActivity {
+public class EquipmentExerciseListActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_equipment_benefits_recyclerview);
+        setContentView(R.layout.activity_equipment_exercise_list_recyclerview);
     }
 }

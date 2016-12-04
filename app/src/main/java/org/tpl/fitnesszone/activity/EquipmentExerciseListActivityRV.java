@@ -7,17 +7,18 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import com.google.gson.Gson;
 import org.tpl.fitnesszone.R;
-import org.tpl.fitnesszone.adapter.RVAdapter;
-import org.tpl.fitnesszone.model.ExerciseEquipment;
+import org.tpl.fitnesszone.adapter.EquipmentExerciseListRVAdapter;
+import org.tpl.fitnesszone.model.EquipmentExercise;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
 
-public class EquipmentBenefitsActivityRV extends AppCompatActivity {
+public class EquipmentExerciseListActivityRV extends AppCompatActivity {
 
-    private ExerciseEquipment[] exerciseEquipments;
+    private EquipmentExercise[] equipmentExercises;
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
@@ -25,7 +26,7 @@ public class EquipmentBenefitsActivityRV extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_equipment_benefits_recyclerview);
+        setContentView(R.layout.activity_equipment_exercise_list_recyclerview);
 
         Toolbar fzToolbar = (Toolbar) findViewById(R.id.fz_toolbar);
         fzToolbar.setTitle(R.string.fitness_equipment_and_exercises);
@@ -42,15 +43,15 @@ public class EquipmentBenefitsActivityRV extends AppCompatActivity {
     }
 
     private void initializeData() {
-        // Loading the equipment info from the json file in the raw resource folder
+        // Loading the equipmentExercise info from the json file in the raw resource folder
         Gson gson = new Gson();
-        InputStream inputStream = getResources().openRawResource(R.raw.equipment);
+        InputStream inputStream = getResources().openRawResource(R.raw.equipment_exercise);
         Reader rd = new BufferedReader(new InputStreamReader(inputStream));
-        exerciseEquipments = gson.fromJson(rd, ExerciseEquipment[].class);
+        equipmentExercises = gson.fromJson(rd, EquipmentExercise[].class);
     }
 
     private void initializeAdapter() {
-        adapter = new RVAdapter(exerciseEquipments);
+        adapter = new EquipmentExerciseListRVAdapter(equipmentExercises);
         recyclerView.setAdapter(adapter);
     }
 }

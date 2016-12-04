@@ -7,7 +7,7 @@ import android.widget.TextView;
 import org.tpl.fitnesszone.R;
 
 
-public class EquipmentBenefitsActivityCV extends AppCompatActivity {
+public class EquipmentExerciseListActivityCV extends AppCompatActivity {
 
     ImageView equipmentImage;
     TextView exerciseName;
@@ -16,7 +16,7 @@ public class EquipmentBenefitsActivityCV extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_equipment_benefits_cardview);
+        setContentView(R.layout.activity_equipment_exercise_list_cardview);
 
         equipmentImage = (ImageView)findViewById(R.id.equipment_image);
         exerciseName = (TextView)findViewById(R.id.exercise_name);
