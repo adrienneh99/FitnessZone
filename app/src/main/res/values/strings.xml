@@ -22,6 +22,7 @@
     <string name="developer_button_text">Developer biography.\nLearn more</string>
     <string name="developer_text">Click here to learn more about the Developer</string>
     <string name="developer_title">Developer</string>
+    <string name="exercise_tips">Exercise Tips</string>
     <string name="find_a_fz">Find a Fitness Zone</string>
     <string name="fitness_equipment_and_exercises">Fitness Equipment and Exercises</string>
     <string name="fitness_equipment_benefits">Fitness Equipment Benefits</string>
@@ -41,6 +42,7 @@
     <string name="get_active_text">Try to be active every day. Even if you\'ve never exercised or
         haven\'t exercised in many years, you can benefit from fitness at any age.</string>
     <string name="health_benefits">Health Benefits</string>
+    <string name="instructions">Instructions For Use</string>
     <string name="learn_more">Learn More</string>
     <string-array name="location_array">
         <item>Zuni Park</item>
@@ -75,7 +77,7 @@
     <string name="title_activity_location">Map</string>
     <string name="tpl">The Trust for Public Land</string>
     <string name="tuesday">Tuesday</string>
-    <string name="type_of_activity">Type of Activity</string>
+    <string name="type_of_activity">Type of Activity\u0020\u0020-\u0020\u0020</string>
     <string name="wednesday">Wednesday</string>
     <string name="weight">Weight:</string>
 

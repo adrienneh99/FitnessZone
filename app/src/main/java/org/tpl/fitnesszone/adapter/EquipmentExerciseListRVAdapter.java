@@ -1,6 +1,7 @@
 package org.tpl.fitnesszone.adapter;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -29,7 +30,7 @@ public class EquipmentExerciseListRVAdapter extends RecyclerView.Adapter<Equipme
         // Populate the ViewHolder and store it inside the layout
         EquipmentViewHolder(View itemView) {
             super(itemView);
-            cv = (CardView)itemView.findViewById(R.id.equipment_benefits_cardview);
+            cv = (CardView)itemView.findViewById(R.id.equipment_exercise_list_cardview);
             equipmentImage = (ImageView)itemView.findViewById(R.id.equipment_image);
             exerciseName = (TextView)itemView.findViewById(R.id.exercise_name);
             activityType = (TextView)itemView.findViewById(R.id.activity_type);
@@ -75,7 +76,7 @@ public class EquipmentExerciseListRVAdapter extends RecyclerView.Adapter<Equipme
             @Override
             public void onClick (View view){
                 Intent intent = new Intent(view.getContext(), EquipmentExerciseDetailActivity.class);
-                intent.putExtra("id", equipmentExercise);
+                intent.putExtra("id", (Parcelable)equipmentExercise);
                 view.getContext().startActivity(intent);
             }
         });

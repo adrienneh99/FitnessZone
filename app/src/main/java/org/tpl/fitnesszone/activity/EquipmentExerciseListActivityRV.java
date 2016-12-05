@@ -32,7 +32,7 @@ public class EquipmentExerciseListActivityRV extends AppCompatActivity {
         fzToolbar.setTitle(R.string.fitness_equipment_and_exercises);
         setSupportActionBar(fzToolbar);
 
-        recyclerView = (RecyclerView) findViewById(R.id.equipment_benefits_recycler_view);
+        recyclerView = (RecyclerView) findViewById(R.id.equipment_exercise_list_recyclerview);
 
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);

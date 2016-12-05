@@ -11,9 +11,9 @@
     tools:context="org.tpl.fitnesszone.activity.EquipmentExerciseListActivity">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/equipment_benefits_cardview"
+        android:id="@+id/equipment_exercise_list_cardview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="120dp"
         android:elevation="8dp"
         card_view:cardCornerRadius="8dp"
         app:cardUseCompatPadding="true" >

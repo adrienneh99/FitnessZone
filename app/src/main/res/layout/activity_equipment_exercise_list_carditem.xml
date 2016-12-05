@@ -4,9 +4,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/equipment_benefits_carditem"
+    android:id="@+id/equipment_exercise_list_carditem"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="120dp"
     android:elevation="8dp"
     card_view:cardCornerRadius="8dp"
     app:cardUseCompatPadding="true" >

@@ -98,11 +98,11 @@ public class EquipmentExercise implements Parcelable {
         this.exerciseName = in.readString();
         this.equipmentName = in.readString();
         this.activityType = in.readString();
-        in.readStringArray(this.activityTypeDetail);
-        in.readStringArray(this.musclesUsed);
-        in.readStringArray(this.healthBenefits);
-        in.readStringArray(this.instructions);
-        in.readStringArray(this.exerciseTips);
+        this.activityTypeDetail = in.createStringArray();
+        this.musclesUsed = in.createStringArray();
+        this.healthBenefits = in.createStringArray();
+        this.instructions = in.createStringArray();
+        this.exerciseTips = in.createStringArray();
     }
 
     // Describe the kinds of special objects contained in this Parcelable instance's
@@ -130,6 +130,7 @@ public class EquipmentExercise implements Parcelable {
     // Interface that must be implemented and provided as a public CREATOR field that
     // generates instances of your Parcelable class from a Parcel
     public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
+
         public EquipmentExercise createFromParcel(Parcel in) {
             return new EquipmentExercise(in);
         }
