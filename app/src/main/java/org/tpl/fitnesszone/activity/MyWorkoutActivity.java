@@ -10,6 +10,10 @@ import org.tpl.fitnesszone.R;
 
 public class MyWorkoutActivity extends AppCompatActivity {
 
+    String circuitArm = "circuit_arm.json";
+    String circuitCardio = "circuit_cardio.json";
+    String circuitLeg = "circuit_leg.json";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,19 +26,22 @@ public class MyWorkoutActivity extends AppCompatActivity {
 
     // Called when the user clicks the Cardio Workout Button
     public void openCardioWorkoutUI(View view){
-        Intent intent = new Intent(MyWorkoutActivity.this, CardioWorkoutActivity.class);
+        Intent intent = new Intent(MyWorkoutActivity.this, CircuitWorkoutActivityRV.class);
+        intent.putExtra("circuit_cardio", circuitCardio);
         startActivity(intent);
     }
 
     // Called when the user clicks the Arm Workout Button
     public void openArmWorkoutUI(View view){
-        Intent intent = new Intent(MyWorkoutActivity.this, ArmWorkoutActivity.class);
+        Intent intent = new Intent(MyWorkoutActivity.this, CircuitWorkoutActivityRV.class);
+        intent.putExtra("circuit_arm", circuitArm);
         startActivity(intent);
     }
 
     // Called when the user clicks the Leg Workout Button
     public void openLegWorkoutUI(View view){
-        Intent intent = new Intent(MyWorkoutActivity.this, LegWorkoutActivity.class);
+        Intent intent = new Intent(MyWorkoutActivity.this, CircuitWorkoutActivityRV.class);
+        intent.putExtra("circuit_leg", circuitLeg);
         startActivity(intent);
     }
 

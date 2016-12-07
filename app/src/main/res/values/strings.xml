@@ -9,19 +9,21 @@
         \nHelps you lose weight</string>
     <string name="app_name">Fitness Zone</string>
     <string name="arm_workout">Arm Workout</string>
-    <string name="before_you_start_text">- Start slowly. Warm up for 5 to 10 minutes with easy
+    <string name="before_you_start_text">\u2022 Start slowly. Warm up for 5 to 10 minutes with easy
         stretching or brisk walking.
-        \n- Take it easy. Moderate exercise can benefit you as much as intense exercise.
-        \n- Read and understand all exercise instructions.</string>
+        \n\u2022 Take it easy. Moderate exercise can benefit you as much as intense exercise.
+        \n\u2022 Read and understand all exercise instructions.</string>
     <string name="before_you_start_title">Before You Start</string>
     <string name="cardio_workout">Cardio Workout</string>
     <string name="complete_exercise_program">A Complete Exercise Program Includes 3 Types of
         Activity:</string>
     <string name="cultivate_health">Cultivate Health, Regis University</string>
     <string name="daily_workout_tracker">Daily Workout Tracker</string>
+    <string name="date_button">DATE</string>
     <string name="developer_button_text">Developer biography.\nLearn more</string>
     <string name="developer_text">Click here to learn more about the Developer</string>
     <string name="developer_title">Developer</string>
+    <string name="exercise_name">Exercise Name\u0020\u0020-\u0020\u0020</string>
     <string name="exercise_tips">Exercise Tips</string>
     <string name="find_a_fz">Find a Fitness Zone</string>
     <string name="fitness_equipment_and_exercises">Fitness Equipment and Exercises</string>
@@ -61,8 +63,11 @@
     <string name="project_partners_title">Project Partners</string>
     <string name="recent_activity">Recent Activity</string>
     <string name="regis">Regis University</string>
+    <string name="repetitions">Repetitions\u0020\u0020-\u0020\u0020</string>
+    <string name="rest_between_sets">Rest Between Sets\u0020\u0020-\u0020\u0020</string>
     <string name="saturday">Saturday</string>
     <string name="select_your_workout">Select Your Workout</string>
+    <string name="sets">Sets\u0020\u0020-\u0020\u0020</string>
     <string name="strength_building">STRENGTH-BUILDING</string>
     <string name="strength_building_duration">(minimum 10 minutes a day)</string>
     <string name="strength_building_text">Increases strength

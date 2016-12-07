@@ -20,9 +20,108 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="This is the Cardio Workout" />
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--Action Name-->
+            <TextView
+                android:id="@+id/circuit_action"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!--Exercise Name Label-->
+            <TextView
+                android:id="@+id/exercise_name_label"
+                android:text="@string/exercise_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/circuit_action"
+                android:layout_marginLeft="16dp"
+                android:textSize="16sp" />
+
+            <!--Circuit Exercise Name-->
+            <TextView
+                android:id="@+id/circuit_exercise_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/circuit_action"
+                android:layout_toRightOf="@id/exercise_name_label"
+                android:layout_marginRight="16dp" />
+
+            <!--Repetitions Label-->
+            <TextView
+                android:id="@+id/repetitions_label"
+                android:text="@string/repetitions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/exercise_name_label"
+                android:layout_marginLeft="16dp"
+                android:textSize="16sp" />
+
+            <!--Circuit Repetitions-->
+            <TextView
+                android:id="@+id/circuit_repetitions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/exercise_name_label"
+                android:layout_toRightOf="@id/repetitions_label"
+                android:layout_marginRight="16dp" />
+
+            <!--Sets Label-->
+            <TextView
+                android:id="@+id/sets_label"
+                android:text="@string/sets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/repetitions_label"
+                android:layout_marginLeft="16dp"
+                android:textSize="16sp" />
+
+            <!--Circuit Sets-->
+            <TextView
+                android:id="@+id/circuit_sets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/repetitions_label"
+                android:layout_toRightOf="@id/sets_label"
+                android:layout_marginRight="16dp" />
+
+            <!--Rest Between Sets Label-->
+            <TextView
+                android:id="@+id/rest_between_sets_label"
+                android:text="@string/rest_between_sets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/sets_label"
+                android:layout_marginLeft="16dp"
+                android:textSize="16sp" />
+
+            <!--Circuit Rest Between Sets-->
+            <TextView
+                android:id="@+id/circuit_rest_between_sets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sets_label"
+                android:layout_toRightOf="@id/rest_between_sets_label"
+                android:layout_marginRight="16dp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 </LinearLayout>

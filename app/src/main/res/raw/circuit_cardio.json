@@ -1,0 +1,100 @@
+[
+  {
+    "action":"Warm Up",
+    "exerciseName":"Elliptical or Cardio Walker",
+    "repetitions":"5 minutes",
+    "sets":"\u2013",
+    "restBetweenSets":"\u2013"
+  },
+  {
+    "action":"Exercise 1",
+    "exerciseName":"Chin Up",
+    "repetitions":"30 seconds",
+    "sets":"1-3",
+    "restBetweenSets":"1-2 minutes"
+  },
+  {
+    "action":"Exercise 2",
+    "exerciseName":"Plyometric Box",
+    "repetitions":"30 seconds",
+    "sets":"1-3",
+    "restBetweenSets":"1-2 minutes"
+  },
+  {
+    "action":"Exercise 3",
+    "exerciseName":"Push Up",
+    "repetitions":"30 seconds",
+    "sets":"1-3",
+    "restBetweenSets":"1-2 minutes"
+  },
+  {
+    "action":"Exercise 4",
+    "exerciseName":"Captain's Chair",
+    "repetitions":"30 seconds",
+    "sets":"1-3",
+    "restBetweenSets":"1-2 minutes"
+  },
+  {
+    "action":"Exercise 5",
+    "exerciseName":"Chest Press",
+    "repetitions":"30 seconds",
+    "sets":"1-3",
+    "restBetweenSets":"1-2 minutes"
+  },
+  {
+    "action":"Exercise 6",
+    "exerciseName":"Balance Board",
+    "repetitions":"30 seconds",
+    "sets":"1-3",
+    "restBetweenSets":"1-2 minutes"
+  },
+  {
+    "action":"Cool Down",
+    "exerciseName":"Cardio Walker",
+    "repetitions":"5 minutes",
+    "sets":"\u2013",
+    "restBetweenSets":"\u2013"
+  },
+  {
+    "action":"Stretch 1",
+    "exerciseName":"Quadriceps Stretch",
+    "repetitions":"Hold 30-60 seconds",
+    "sets":"\u2013",
+    "restBetweenSets":"\u2013"
+  },
+  {
+    "action":"Stretch 2",
+    "exerciseName":"Hamstrings Stretch",
+    "repetitions":"Hold 30-60 seconds",
+    "sets":"\u2013",
+    "restBetweenSets":"\u2013"
+  },
+  {
+    "action":"Stretch 3",
+    "exerciseName":"Calf Stretch",
+    "repetitions":"Hold 30-60 seconds",
+    "sets":"\u2013",
+    "restBetweenSets":"\u2013"
+  },
+  {
+    "action":"Stretch 4",
+    "exerciseName":"Deltoid Stretch",
+    "repetitions":"Hold 30-60 seconds",
+    "sets":"\u2013",
+    "restBetweenSets":"\u2013"
+  },
+  {
+    "action":"Stretch 5",
+    "exerciseName":"Triceps Stretch",
+    "repetitions":"Hold 30-60 seconds",
+    "sets":"\u2013",
+    "restBetweenSets":"\u2013"
+  },
+  {
+    "action":"Stretch 6",
+    "exerciseName":"Chest Stretch",
+    "repetitions":"Hold 30-60 seconds",
+    "sets":"\u2013",
+    "restBetweenSets":"\u2013"
+  }
+]

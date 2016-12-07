@@ -1,0 +1,72 @@
+[
+  {
+    "action":"Exercise 1",
+    "exerciseName":"Elliptical",
+    "repetitions":"10-20 minutes",
+    "sets":"\u2013",
+    "restBetweenSets":"\u2013"
+  },
+  {
+    "action":"Exercise 2",
+    "exerciseName":"Chest Press",
+    "repetitions":"8-15",
+    "sets":"2-4",
+    "restBetweenSets":"1 minute"
+  },
+  {
+    "action":"Exercise 3",
+    "exerciseName":"Captain's Chair",
+    "repetitions":"15-30 seconds",
+    "sets":"2-4",
+    "restBetweenSets":"1 minute"
+  },
+  {
+    "action":"Exercise 4",
+    "exerciseName":"Chin Ups or Horizontal Chin Ups",
+    "repetitions":"8-15",
+    "sets":"2-4",
+    "restBetweenSets":"1 minute"
+  },
+  {
+    "action":"Exercise 5",
+    "exerciseName":"Push Ups",
+    "repetitions":"8-15",
+    "sets":"2-4",
+    "restBetweenSets":"1 minute"
+  },
+  {
+    "action":"Exercise 6",
+    "exerciseName":"Balance Board",
+    "repetitions":"30-60 seconds",
+    "sets":"2-4",
+    "restBetweenSets":"1 minute"
+  },
+  {
+    "action":"Cool Down",
+    "exerciseName":"Elliptical",
+    "repetitions":"5 minutes",
+    "sets":"\u2013",
+    "restBetweenSets":"\u2013"
+  },
+  {
+    "action":"Stretch 1",
+    "exerciseName":"Deltoid Stretch",
+    "repetitions":"Hold 30-60 seconds",
+    "sets":"\u2013",
+    "restBetweenSets":"\u2013"
+  },
+  {
+    "action":"Stretch 2",
+    "exerciseName":"Triceps Stretch",
+    "repetitions":"Hold 30-60 seconds",
+    "sets":"\u2013",
+    "restBetweenSets":"\u2013"
+  },
+  {
+    "action":"Stretch 3",
+    "exerciseName":"Chest Stretch",
+    "repetitions":"Hold 30-60 seconds",
+    "sets":"\u2013",
+    "restBetweenSets":"\u2013"
+  }
+]

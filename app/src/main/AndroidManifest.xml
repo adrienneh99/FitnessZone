@@ -18,7 +18,115 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!-- Launch Activity -->
+        <!-- ABOUT -->
+        <activity android:name=".activity.AboutActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- ARM WORKOUT -->
+        <activity android:name=".activity.ArmWorkoutActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- CARDIO WORKOUT -->
+        <activity android:name=".activity.CardioWorkoutActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- CIRCUIT WORKOUT -->
+        <activity android:name=".activity.CircuitWorkoutActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- CIRCUIT WORKOUT RECYCLER VIEW -->
+        <activity android:name=".activity.CircuitWorkoutActivityRV">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- EQUIPMENT EXERCISE DETAIL -->
+        <activity android:name=".activity.EquipmentExerciseDetailActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- EQUIPMENT EXERCISE LIST -->
+        <activity android:name=".activity.EquipmentExerciseListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- EQUIPMENT EXERCISE LIST CARD VIEW -->
+        <activity android:name=".activity.EquipmentExerciseListActivityCV">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- EQUIPMENT EXERCISE LIST RECYCLER VIEW -->
+        <activity android:name=".activity.EquipmentExerciseListActivityRV">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- FITNESS JOURNAL -->
+        <activity android:name=".activity.FitnessJournalActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- HEALTH BENEFITS -->
+        <activity android:name=".activity.HealthBenefitsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- HOME -->
+        <activity android:name=".activity.HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- LAUNCH -->
         <activity
             android:name=".activity.LaunchActivity"
             android:theme="@style/LaunchTheme">
@@ -29,10 +137,10 @@
             </intent-filter>
         </activity>
 
-        <!-- Home Activity -->
-        <activity android:name=".activity.HomeActivity">
+        <!-- LEG WORKOUT -->
+        <activity android:name=".activity.LegWorkoutActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -50,7 +158,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <!-- Location Activity -->
+        <!-- LOCATION -->
         <activity
             android:name=".activity.LocationActivity"
             android:label="@string/title_activity_location">
@@ -59,52 +167,7 @@
                 android:value="org.tpl.fitnesszone.activity.HomeActivity" />
         </activity>
 
-        <!-- Health Benefits Activity -->
-        <activity android:name=".activity.HealthBenefitsActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <!-- Fitness Equipment Benefits Activity Recycler View -->
-        <activity android:name=".activity.EquipmentExerciseListActivityRV">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <!-- Fitness Equipment Benefits Activity Card View -->
-        <activity android:name=".activity.EquipmentExerciseListActivityCV">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <!-- Fitness Equipment Benefits Activity -->
-        <activity android:name=".activity.EquipmentExerciseListActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <!-- Fitness Equipment Exercises Activity -->
-        <activity android:name=".activity.EquipmentExerciseDetailActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <!-- My Workout Activity -->
+        <!-- MY WORKOUT -->
         <activity android:name=".activity.MyWorkoutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -113,53 +176,8 @@
             </intent-filter>
         </activity>
 
-        <!-- Cardio Workout Activity -->
-        <activity android:name=".activity.CardioWorkoutActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <!-- Arm Workout Activity -->
-        <activity android:name=".activity.ArmWorkoutActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <!-- Leg Workout Activity -->
-        <activity android:name=".activity.LegWorkoutActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <!-- Fitness Journal Activity -->
-        <activity android:name=".activity.FitnessJournalActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <!-- Daily Workout Tracker Activity -->
+        <!-- WORKOUT TRACKER -->
         <activity android:name=".activity.WorkoutTrackerActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <!-- About Activity -->
-        <activity android:name=".activity.AboutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 

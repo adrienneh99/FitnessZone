@@ -1,0 +1,58 @@
+[
+  {
+    "action":"Exercise 1",
+    "exerciseName":"Cardio Walker",
+    "repetitions":"10-20 minutes",
+    "sets":"\u2013",
+    "restBetweenSets":"\u2013"
+  },
+  {
+    "action":"Exercise 2",
+    "exerciseName":"Captain's Chair",
+    "repetitions":"15-30 seconds",
+    "sets":"2-4",
+    "restBetweenSets":"1 minute"
+  },
+  {
+    "action":"Exercise 3",
+    "exerciseName":"Plyometric Box",
+    "repetitions":"8-15",
+    "sets":"2-4",
+    "restBetweenSets":"1 minute"
+  },
+  {
+    "action":"Exercise 4",
+    "exerciseName":"Balance Board",
+    "repetitions":"30-60 seconds",
+    "sets":"2-4",
+    "restBetweenSets":"1 minute"
+  },
+  {
+    "action":"Cool Down",
+    "exerciseName":"Cardio Walker",
+    "repetitions":"5 minutes",
+    "sets":"\u2013",
+    "restBetweenSets":"\u2013"
+  },
+  {
+    "action":"Stretch 1",
+    "exerciseName":"Quadriceps Stretch",
+    "repetitions":"Hold 30-60 seconds",
+    "sets":"\u2013",
+    "restBetweenSets":"\u2013"
+  },
+  {
+    "action":"Stretch 2",
+    "exerciseName":"Hamstrings Stretch",
+    "repetitions":"Hold 30-60 seconds",
+    "sets":"\u2013",
+    "restBetweenSets":"\u2013"
+  },
+  {
+    "action":"Stretch 3",
+    "exerciseName":"Calf Stretch",
+    "repetitions":"Hold 30-60 seconds",
+    "sets":"\u2013",
+    "restBetweenSets":"\u2013"
+  }
+]
