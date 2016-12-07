@@ -28,22 +28,8 @@
         </activity>
 
         <!-- ARM WORKOUT -->
-        <activity android:name=".activity.ArmWorkoutActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
 
         <!-- CARDIO WORKOUT -->
-        <activity android:name=".activity.CardioWorkoutActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
 
         <!-- CIRCUIT WORKOUT -->
         <activity android:name=".activity.CircuitWorkoutActivity">
@@ -138,13 +124,6 @@
         </activity>
 
         <!-- LEG WORKOUT -->
-        <activity android:name=".activity.LegWorkoutActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

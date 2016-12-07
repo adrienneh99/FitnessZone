@@ -26,6 +26,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
         android:layout_alignParentLeft="true"
         android:layout_below="@id/fz_toolbar"
         android:onClick="showDatePickerDialog" />
@@ -36,22 +39,22 @@
         android:text="@string/weight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
         android:layout_alignParentLeft="true"
         android:layout_below="@id/date_button"
-        android:layout_marginLeft="16dp"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp" />
+        android:layout_marginLeft="16dp" />
 
     <!--User Weight-->
     <EditText
         android:id="@+id/user_weight_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
         android:layout_below="@id/date_button"
         android:layout_toRightOf="@id/user_weight_title"
         android:layout_alignBottom="@id/user_weight_title"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
         android:inputType="number"
         android:ems="3" />
 
@@ -61,11 +64,11 @@
         android:text="@string/lbs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
         android:layout_below="@id/date_button"
         android:layout_toRightOf="@id/user_weight_edit_text"
-        android:layout_alignBottom="@id/user_weight_edit_text"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp" />
+        android:layout_alignBottom="@id/user_weight_edit_text" />
 
     <TextView
         android:id="@+id/todays_focus"
@@ -73,6 +76,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
         android:layout_alignParentLeft="true"
         android:layout_below="@id/user_weight_title" />
 
@@ -82,6 +87,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
         android:layout_below="@id/user_weight_title"
         android:layout_toRightOf="@id/todays_focus"
         android:layout_alignBaseline="@id/todays_focus"
@@ -93,6 +100,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
         android:layout_below="@id/user_weight_title"
         android:layout_toRightOf="@id/arms"
         android:layout_alignBaseline="@id/todays_focus"
@@ -104,6 +113,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
         android:layout_below="@id/user_weight_title"
         android:layout_toRightOf="@id/legs"
         android:layout_alignBaseline="@id/todays_focus"

@@ -10,9 +10,9 @@ import org.tpl.fitnesszone.R;
 
 public class MyWorkoutActivity extends AppCompatActivity {
 
-    String circuitArm = "circuit_arm.json";
-    String circuitCardio = "circuit_cardio.json";
-    String circuitLeg = "circuit_leg.json";
+    String circuitArm = "circuit_arm";
+    String circuitCardio = "circuit_cardio";
+    String circuitLeg = "circuit_leg";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

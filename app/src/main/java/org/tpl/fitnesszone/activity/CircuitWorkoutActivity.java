@@ -10,6 +10,6 @@ public class CircuitWorkoutActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_equipment_exercise_list_recyclerview);
+        setContentView(R.layout.activity_circuit_workout_recyclerview);
     }
 }

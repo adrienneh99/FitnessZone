@@ -32,13 +32,19 @@ public class CircuitWorkoutActivityRV extends AppCompatActivity {
 
         Intent intent = getIntent();
         String circuitFilename = intent.getExtras().getString("circuit_type");
-        //Mike Commented out this:
-//        String circuitArm = intent.getExtras().get("circuit_arm");
 
-
-        // ***NEED TO UPDATE TOOLBAR TITLE DEPENDING ON WHETHER ARM, LEG OR CARDIO ARE CLICKED***
         Toolbar fzToolbar = (Toolbar) findViewById(R.id.fz_toolbar);
-        fzToolbar.setTitle(R.string.cardio_workout);
+
+        if (circuitFilename.equals("circuit_arm")) {
+            fzToolbar.setTitle(R.string.arm_workout);
+        }
+        else if (circuitFilename.equals("circuit_leg")) {
+            fzToolbar.setTitle(R.string.leg_workout);
+        }
+        else {
+            fzToolbar.setTitle(R.string.cardio_workout);
+        }
+
         setSupportActionBar(fzToolbar);
 
         recyclerView = (RecyclerView) findViewById(R.id.circuit_workout_recyclerview);
@@ -50,15 +56,12 @@ public class CircuitWorkoutActivityRV extends AppCompatActivity {
         initializeData(circuitFilename);
         initializeAdapter();
     }
-    //Mike changed this method to accept the string parameter for the json filename:
+
     private void initializeData(String jsonFilename) {
         // Loading the circuit info from the json file in the raw resource folder
         Gson gson = new Gson();
-
-        //Mike added this, it changed the  like the follow it and is commented out:
         int rawResourceID = ResourceUtils.getResourceId(jsonFilename, R.raw.class);
         InputStream inputStream = getResources().openRawResource(rawResourceID);
-//        InputStream inputStream = getResources().openRawResource(R.raw.circuit_cardio);
         Reader rd = new BufferedReader(new InputStreamReader(inputStream));
         circuits = gson.fromJson(rd, Circuit[].class);
     }

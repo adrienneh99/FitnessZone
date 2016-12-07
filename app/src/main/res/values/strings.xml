@@ -3,10 +3,10 @@
     <string name="about_my_fz_app">About My Fitness Zone App</string>
     <string name="aerobic_exercise">AEROBIC EXERCISE</string>
     <string name="aerobic_exercise_duration">(minimum 30 minutes a day)</string>
-    <string name="aerobic_exercise_text">Raises your heart rate
-        \nUses the large muscles of the body (arms, legs, back)
-        \nDecreases risk of chronic disease
-        \nHelps you lose weight</string>
+    <string name="aerobic_exercise_text">\u2022 Raises your heart rate
+        \n\u2022 Uses the large muscles of the body (arms, legs, back)
+        \n\u2022 Decreases risk of chronic disease
+        \n\u2022 Helps you lose weight</string>
     <string name="app_name">Fitness Zone</string>
     <string name="arms">Arms</string>
     <string name="arm_workout">Arm Workout</string>
@@ -25,7 +25,7 @@
     <string name="developer_button_text">Developer biography.\nLearn more</string>
     <string name="developer_text">Click here to learn more about the Developer</string>
     <string name="developer_title">Developer</string>
-    <string name="exercise_name">Exercise Name\u0020\u0020-\u0020\u0020</string>
+    <string name="exercise_name">Exercise Name:\u0020\u0020</string>
     <string name="exercise_tips">Exercise Tips</string>
     <string name="find_a_fz">Find a Fitness Zone</string>
     <string name="fitness_equipment_and_exercises">Fitness Equipment and Exercises</string>
@@ -61,25 +61,25 @@
     <string name="my_fitness_goal">My Fitness Goal</string>
     <string name="my_progress">My Progress</string>
     <string name="my_workout">My Workout</string>
-    <string name="number_of_workouts_tracked">Number of Workouts Tracked</string>
+    <string name="number_of_workouts_tracked">Number of Workouts Tracked:\u0020\u0020</string>
     <string name="project_partners_text">Click a logo to learn more about each Project Partner</string>
     <string name="project_partners_title">Project Partners</string>
     <string name="recent_activity">Recent Activity</string>
     <string name="regis">Regis University</string>
-    <string name="repetitions">Repetitions\u0020\u0020-\u0020\u0020</string>
-    <string name="rest_between_sets">Rest Between Sets\u0020\u0020-\u0020\u0020</string>
+    <string name="repetitions">Repetitions:\u0020\u0020</string>
+    <string name="rest_between_sets">Rest Between Sets:\u0020\u0020</string>
     <string name="saturday">Saturday</string>
     <string name="select_your_workout">Select Your Workout</string>
-    <string name="sets">Sets\u0020\u0020-\u0020\u0020</string>
+    <string name="sets">Sets:\u0020\u0020</string>
     <string name="strength_building">STRENGTH-BUILDING</string>
     <string name="strength_building_duration">(minimum 10 minutes a day)</string>
-    <string name="strength_building_text">Increases strength
-        \nImproves balance
-        \nIncreases bone density</string>
+    <string name="strength_building_text">\u2022 Increases strength
+        \n\u2022 Improves balance
+        \n\u2022 Increases bone density</string>
     <string name="stretching">STRETCHING</string>
     <string name="stretching_duration">(minimum 5 to 10 minutes a day)</string>
-    <string name="stretching_text">Loosens stiff joints
-        \nLengthens and loosens muscles</string>
+    <string name="stretching_text">\u2022 Loosens stiff joints
+        \n\u2022 Lengthens and loosens muscles</string>
     <string name="sunday">Sunday</string>
     <string name="thursday">Thursday</string>
     <string name="title_activity_location">Map</string>

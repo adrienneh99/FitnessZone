@@ -30,7 +30,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:paddingTop="16dp"
-        android:paddingBottom="8dp" />
+        android:paddingBottom="16dp" />
 
     <!--User Goal-->
     <EditText
@@ -41,6 +41,7 @@
         android:layout_below="@id/my_fitness_goal_title"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:paddingTop="16dp"
         android:paddingBottom="16dp"
         android:inputType="textMultiLine"
         android:ems="50" />
@@ -86,6 +87,9 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_below="@id/user_weight_title"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:background="#FF909090" />
 
     <!--User Progress Title-->
@@ -96,12 +100,14 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/user_weight_label"
+        android:layout_marginTop="16dp"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/user_weight_label"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary" />
 
     <!--Number of Workouts Tracked Label-->
     <TextView
@@ -111,9 +117,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_alignParentLeft="true"
+        android:layout_below="@id/user_progress_title"
         android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:layout_below="@id/user_progress_title" />
+        android:paddingBottom="16dp" />
 
     <!--Number of Workouts Tracked-->
     <EditText
@@ -137,9 +143,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/number_of_workouts_tracked_edit_text"
         android:paddingTop="16dp"
-        android:paddingBottom="16dp" />
+        android:paddingBottom="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/number_of_workouts_tracked_edit_text" />
 
 </RelativeLayout>

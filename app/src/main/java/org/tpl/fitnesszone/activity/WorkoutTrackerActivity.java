@@ -30,18 +30,19 @@ public class WorkoutTrackerActivity extends AppCompatActivity {
 
     // Method to handle the click events for the arm, leg, and cardio checkboxes
     public void onCheckboxClicked(View view) {
+
         // Determine if the checkbox is clicked
         boolean checked = ((CheckBox) view).isChecked();
 
         // Check which checkbox was clicked...
-        switch (view.getId()) {
-            case R.id.arms:
-                if (checked) {
-                    // **POPULATE THE EXERCISE SPINNER WITH ALL ARM CIRCUIT EXERCISES**
-                }
-                else {
-
-                }
+        if (checked && (view.getId() == R.id.arms)){
+            // **POPULATE THE EXERCISE SPINNER WITH ALL ARM CIRCUIT EXERCISES**
+        }
+        else if (checked && (view.getId() == R.id.legs)) {
+            // **POPULATE THE EXERCISE SPINNER WITH ALL LEG CIRCUIT EXERCISES**
+        }
+        else if (checked){
+            // **POPULATE THE EXERCISE SPINNER WITH ALL CARDIO CIRCUIT EXERCISES**
         }
     }
 
