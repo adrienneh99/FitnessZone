@@ -27,21 +27,21 @@ public class MyWorkoutActivity extends AppCompatActivity {
     // Called when the user clicks the Cardio Workout Button
     public void openCardioWorkoutUI(View view){
         Intent intent = new Intent(MyWorkoutActivity.this, CircuitWorkoutActivityRV.class);
-        intent.putExtra("circuit_cardio", circuitCardio);
+        intent.putExtra("circuit_type", circuitCardio);
         startActivity(intent);
     }
 
     // Called when the user clicks the Arm Workout Button
     public void openArmWorkoutUI(View view){
         Intent intent = new Intent(MyWorkoutActivity.this, CircuitWorkoutActivityRV.class);
-        intent.putExtra("circuit_arm", circuitArm);
+        intent.putExtra("circuit_type", circuitArm);
         startActivity(intent);
     }
 
     // Called when the user clicks the Leg Workout Button
     public void openLegWorkoutUI(View view){
         Intent intent = new Intent(MyWorkoutActivity.this, CircuitWorkoutActivityRV.class);
-        intent.putExtra("circuit_leg", circuitLeg);
+        intent.putExtra("circuit_type", circuitLeg);
         startActivity(intent);
     }
 

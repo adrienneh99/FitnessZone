@@ -25,9 +25,91 @@
         android:text="@string/date_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
         android:layout_alignParentLeft="true"
         android:layout_below="@id/fz_toolbar"
         android:onClick="showDatePickerDialog" />
+
+    <!--User Weight Title-->
+    <TextView
+        android:id="@+id/user_weight_title"
+        android:text="@string/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/date_button"
+        android:layout_marginLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp" />
+
+    <!--User Weight-->
+    <EditText
+        android:id="@+id/user_weight_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date_button"
+        android:layout_toRightOf="@id/user_weight_title"
+        android:layout_alignBottom="@id/user_weight_title"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:inputType="number"
+        android:ems="3" />
+
+    <!--Weight Label-->
+    <TextView
+        android:id="@+id/user_weight_label"
+        android:text="@string/lbs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date_button"
+        android:layout_toRightOf="@id/user_weight_edit_text"
+        android:layout_alignBottom="@id/user_weight_edit_text"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp" />
+
+    <TextView
+        android:id="@+id/todays_focus"
+        android:text="@string/todays_focus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/user_weight_title" />
+
+    <CheckBox
+        android:id="@+id/arms"
+        android:text="@string/arms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@id/user_weight_title"
+        android:layout_toRightOf="@id/todays_focus"
+        android:layout_alignBaseline="@id/todays_focus"
+        android:onClick="onCheckboxClicked" />
+
+    <CheckBox
+        android:id="@+id/legs"
+        android:text="@string/legs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@id/user_weight_title"
+        android:layout_toRightOf="@id/arms"
+        android:layout_alignBaseline="@id/todays_focus"
+        android:onClick="onCheckboxClicked" />
+
+    <CheckBox
+        android:id="@+id/cardio"
+        android:text="@string/cardio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@id/user_weight_title"
+        android:layout_toRightOf="@id/legs"
+        android:layout_alignBaseline="@id/todays_focus"
+        android:onClick="onCheckboxClicked" />
+
+
 
 
 

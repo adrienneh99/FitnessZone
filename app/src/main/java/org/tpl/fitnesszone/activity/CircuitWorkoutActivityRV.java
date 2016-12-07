@@ -31,8 +31,7 @@ public class CircuitWorkoutActivityRV extends AppCompatActivity {
         setContentView(R.layout.activity_circuit_workout_recyclerview);
 
         Intent intent = getIntent();
-        //Mike added this:
-        String circuitArm = intent.getExtras().getString("circuit_arm");
+        String circuitFilename = intent.getExtras().getString("circuit_type");
         //Mike Commented out this:
 //        String circuitArm = intent.getExtras().get("circuit_arm");
 
@@ -48,7 +47,7 @@ public class CircuitWorkoutActivityRV extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
 
-        initializeData(circuitArm);
+        initializeData(circuitFilename);
         initializeAdapter();
     }
     //Mike changed this method to accept the string parameter for the json filename:

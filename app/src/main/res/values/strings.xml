@@ -8,12 +8,14 @@
         \nDecreases risk of chronic disease
         \nHelps you lose weight</string>
     <string name="app_name">Fitness Zone</string>
+    <string name="arms">Arms</string>
     <string name="arm_workout">Arm Workout</string>
     <string name="before_you_start_text">\u2022 Start slowly. Warm up for 5 to 10 minutes with easy
         stretching or brisk walking.
         \n\u2022 Take it easy. Moderate exercise can benefit you as much as intense exercise.
         \n\u2022 Read and understand all exercise instructions.</string>
     <string name="before_you_start_title">Before You Start</string>
+    <string name="cardio">Cardio</string>
     <string name="cardio_workout">Cardio Workout</string>
     <string name="complete_exercise_program">A Complete Exercise Program Includes 3 Types of
         Activity:</string>
@@ -52,6 +54,7 @@
         <item>Aria (Future)</item>
     </string-array>
     <string name="lbs">(lbs)</string>
+    <string name="legs">Legs</string>
     <string name="leg_workout">Leg Workout</string>
     <string name="monday">Monday</string>
     <string name="muscles_used">Muscles Used</string>
@@ -80,6 +83,7 @@
     <string name="sunday">Sunday</string>
     <string name="thursday">Thursday</string>
     <string name="title_activity_location">Map</string>
+    <string name="todays_focus">Today\'s Focus:</string>
     <string name="tpl">The Trust for Public Land</string>
     <string name="tuesday">Tuesday</string>
     <string name="type_of_activity">Type of Activity\u0020\u0020-\u0020\u0020</string>
