@@ -17,6 +17,7 @@
     <string name="before_you_start_title">Before You Start</string>
     <string name="cardio">Cardio</string>
     <string name="cardio_workout">Cardio Workout</string>
+    <string name="choose_an_exercise">Choose An Exercise</string>
     <string name="complete_exercise_program">A Complete Exercise Program Includes 3 Types of
         Activity:</string>
     <string name="cultivate_health">Cultivate Health, Regis University</string>
@@ -48,11 +49,6 @@
     <string name="health_benefits">Health Benefits</string>
     <string name="instructions">Instructions For Use</string>
     <string name="learn_more">Learn More</string>
-    <string-array name="location_array">
-        <item>Zuni Park</item>
-        <item>Aria (Current)</item>
-        <item>Aria (Future)</item>
-    </string-array>
     <string name="lbs">(lbs)</string>
     <string name="legs">Legs</string>
     <string name="leg_workout">Leg Workout</string>
@@ -67,6 +63,9 @@
     <string name="recent_activity">Recent Activity</string>
     <string name="regis">Regis University</string>
     <string name="repetitions">Repetitions:\u0020\u0020</string>
+    <string name="reps_set1">Reps\nSet 1</string>
+    <string name="reps_set2">Reps\nSet 2</string>
+    <string name="reps_set3">Reps\nSet 3</string>
     <string name="rest_between_sets">Rest Between Sets:\u0020\u0020</string>
     <string name="saturday">Saturday</string>
     <string name="select_your_workout">Select Your Workout</string>

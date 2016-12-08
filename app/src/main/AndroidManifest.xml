@@ -27,10 +27,6 @@
             </intent-filter>
         </activity>
 
-        <!-- ARM WORKOUT -->
-
-        <!-- CARDIO WORKOUT -->
-
         <!-- CIRCUIT WORKOUT -->
         <activity android:name=".activity.CircuitWorkoutActivity">
             <intent-filter>
@@ -122,8 +118,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- LEG WORKOUT -->
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
