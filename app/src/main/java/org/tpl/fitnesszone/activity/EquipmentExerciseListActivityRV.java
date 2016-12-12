@@ -1,6 +1,7 @@
 package org.tpl.fitnesszone.activity;
 
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -31,6 +32,12 @@ public class EquipmentExerciseListActivityRV extends AppCompatActivity {
         Toolbar fzToolbar = (Toolbar) findViewById(R.id.fz_toolbar);
         fzToolbar.setTitle(R.string.fitness_equipment_and_exercises);
         setSupportActionBar(fzToolbar);
+
+        // Get a support ActionBar corresponding to this toolbar
+        ActionBar ab = getSupportActionBar();
+
+        // Enable the Up button
+        ab.setDisplayHomeAsUpEnabled(true);
 
         recyclerView = (RecyclerView) findViewById(R.id.equipment_exercise_list_recyclerview);
 

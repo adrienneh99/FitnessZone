@@ -5,8 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:label="@string/about_my_fz_app"
         android:title="@string/about_my_fz_app"
+        android:label="@string/about_my_fz_app"
         android:icon="@drawable/ic_about_fz_50x52"
         app:showAsAction="ifRoom|withText"
         />

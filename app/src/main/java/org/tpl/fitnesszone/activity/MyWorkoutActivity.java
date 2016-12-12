@@ -1,6 +1,7 @@
 package org.tpl.fitnesszone.activity;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -22,6 +23,12 @@ public class MyWorkoutActivity extends AppCompatActivity {
         Toolbar fzToolbar = (Toolbar) findViewById(R.id.fz_toolbar);
         fzToolbar.setTitle(R.string.my_workout);
         setSupportActionBar(fzToolbar);
+
+        // Get a support ActionBar corresponding to this toolbar
+        ActionBar ab = getSupportActionBar();
+
+        // Enable the Up button
+        ab.setDisplayHomeAsUpEnabled(true);
     }
 
     // Called when the user clicks the Cardio Workout Button

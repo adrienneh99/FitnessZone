@@ -37,7 +37,7 @@
     <!--User Weight Title-->
     <TextView
         android:id="@+id/user_weight_title"
-        android:text="@string/weight"
+        android:text="@string/weight_current"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="16dp"
@@ -359,5 +359,19 @@
         </TableRow>
 
     </TableLayout>
+
+    <!--Save Button-->
+    <Button
+        android:id="@+id/save_button_workout_tracker"
+        android:text="@string/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:padding="12dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="saveWorkoutTrackerInfo" />
 
 </RelativeLayout>

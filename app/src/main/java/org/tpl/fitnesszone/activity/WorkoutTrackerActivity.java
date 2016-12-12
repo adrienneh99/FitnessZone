@@ -1,6 +1,7 @@
 package org.tpl.fitnesszone.activity;
 
 import android.app.DialogFragment;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -33,6 +34,12 @@ public class WorkoutTrackerActivity extends AppCompatActivity {
         Toolbar fzToolbar = (Toolbar) findViewById(R.id.fz_toolbar);
         fzToolbar.setTitle(R.string.daily_workout_tracker);
         setSupportActionBar(fzToolbar);
+
+        // Get a support ActionBar corresponding to this toolbar
+        ActionBar ab = getSupportActionBar();
+
+        // Enable the Up button
+        ab.setDisplayHomeAsUpEnabled(true);
 
         initializeData();
 
@@ -92,6 +99,15 @@ public class WorkoutTrackerActivity extends AppCompatActivity {
         InputStream inputStream = getResources().openRawResource(R.raw.equipment_exercise);
         Reader rd = new BufferedReader(new InputStreamReader(inputStream));
         equipmentExercises = gson.fromJson(rd, EquipmentExercise[].class);
+    }
+
+    String FILENAME = "workout_tracker_file";
+    String string = "workout_tracker";
+
+    // Method to handle the click event for the save button
+    public void saveWorkoutTrackerInfo(View view) {
+
+
     }
 
 

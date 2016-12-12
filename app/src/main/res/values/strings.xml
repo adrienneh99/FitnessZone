@@ -68,6 +68,7 @@
     <string name="reps_set3">Reps\nSet 3</string>
     <string name="rest_between_sets">Rest Between Sets:\u0020\u0020</string>
     <string name="saturday">Saturday</string>
+    <string name="save">SAVE</string>
     <string name="select_your_workout">Select Your Workout</string>
     <string name="sets">Sets:\u0020\u0020</string>
     <string name="strength_building">STRENGTH-BUILDING</string>
@@ -87,7 +88,8 @@
     <string name="tuesday">Tuesday</string>
     <string name="type_of_activity">Type of Activity\u0020\u0020-\u0020\u0020</string>
     <string name="wednesday">Wednesday</string>
-    <string name="weight">Weight:</string>
+    <string name="weight_current">Current Weight:</string>
+    <string name="weight_starting">Starting Weight:</string>
 
     <!-- Permissions -->
     <string name="permission_rationale_location">Access to the location service is required to

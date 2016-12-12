@@ -19,91 +19,101 @@
         android:theme="@style/AppTheme">
 
         <!-- ABOUT -->
-        <activity android:name=".activity.AboutActivity">
+        <activity
+            android:name=".activity.AboutActivity"
+            android:parentActivityName=".activity.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-        </activity>
-
-        <!-- CIRCUIT WORKOUT -->
-        <activity android:name=".activity.CircuitWorkoutActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.tpl.fitnesszone.activity.HomeActivity" />
         </activity>
 
         <!-- CIRCUIT WORKOUT RECYCLER VIEW -->
-        <activity android:name=".activity.CircuitWorkoutActivityRV">
+        <activity
+            android:name=".activity.CircuitWorkoutActivityRV"
+            android:parentActivityName=".activity.MyWorkoutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.tpl.fitnesszone.activity.MyWorkoutActivity" />
         </activity>
 
         <!-- EQUIPMENT EXERCISE DETAIL -->
-        <activity android:name=".activity.EquipmentExerciseDetailActivity">
+        <activity
+            android:name=".activity.EquipmentExerciseDetailActivity"
+            android:parentActivityName=".activity.EquipmentExerciseListActivityRV">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-        </activity>
-
-        <!-- EQUIPMENT EXERCISE LIST -->
-        <activity android:name=".activity.EquipmentExerciseListActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.tpl.fitnesszone.activity.EquipmentExerciseListActivityRV" />
         </activity>
 
         <!-- EQUIPMENT EXERCISE LIST CARD VIEW -->
         <activity android:name=".activity.EquipmentExerciseListActivityCV">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
         <!-- EQUIPMENT EXERCISE LIST RECYCLER VIEW -->
-        <activity android:name=".activity.EquipmentExerciseListActivityRV">
+        <activity
+            android:name=".activity.EquipmentExerciseListActivityRV"
+            android:parentActivityName=".activity.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.tpl.fitnesszone.activity.HomeActivity" />
         </activity>
 
         <!-- FITNESS JOURNAL -->
-        <activity android:name=".activity.FitnessJournalActivity">
+        <activity
+            android:name=".activity.FitnessJournalActivity"
+            android:parentActivityName=".activity.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.tpl.fitnesszone.activity.HomeActivity" />
         </activity>
 
         <!-- HEALTH BENEFITS -->
-        <activity android:name=".activity.HealthBenefitsActivity">
+        <activity
+            android:name=".activity.HealthBenefitsActivity"
+            android:parentActivityName=".activity.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.tpl.fitnesszone.activity.HomeActivity" />
         </activity>
 
         <!-- HOME -->
         <activity android:name=".activity.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -114,7 +124,6 @@
             android:theme="@style/LaunchTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -134,28 +143,40 @@
         <!-- LOCATION -->
         <activity
             android:name=".activity.LocationActivity"
-            android:label="@string/title_activity_location">
+            android:label="@string/title_activity_location"
+            android:parentActivityName=".activity.HomeActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="org.tpl.fitnesszone.activity.HomeActivity" />
         </activity>
 
         <!-- MY WORKOUT -->
-        <activity android:name=".activity.MyWorkoutActivity">
+        <activity
+            android:name=".activity.MyWorkoutActivity"
+            android:parentActivityName=".activity.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.tpl.fitnesszone.activity.HomeActivity" />
         </activity>
 
         <!-- WORKOUT TRACKER -->
-        <activity android:name=".activity.WorkoutTrackerActivity">
+        <activity
+            android:name=".activity.WorkoutTrackerActivity"
+            android:parentActivityName=".activity.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.tpl.fitnesszone.activity.HomeActivity" />
         </activity>
 
     </application>

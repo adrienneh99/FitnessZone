@@ -2,6 +2,7 @@ package org.tpl.fitnesszone.activity;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -21,13 +22,6 @@ public class AboutActivity extends AppCompatActivity {
     Button developerBioButton;
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_about, menu);
-        return true;
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
@@ -35,6 +29,12 @@ public class AboutActivity extends AppCompatActivity {
         Toolbar fzToolbar = (Toolbar) findViewById(R.id.fz_toolbar);
         fzToolbar.setTitle(R.string.about_my_fz_app);
         setSupportActionBar(fzToolbar);
+
+        // Get a support ActionBar corresponding to this toolbar
+        ActionBar ab = getSupportActionBar();
+
+        // Enable the Up button
+        ab.setDisplayHomeAsUpEnabled(true);
 
         tplButton = (ImageButton) findViewById(R.id.tpl_button);
         tplButton.setOnClickListener(new View.OnClickListener() {
@@ -72,6 +72,13 @@ public class AboutActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_about, menu);
+        return true;
     }
 
 }
