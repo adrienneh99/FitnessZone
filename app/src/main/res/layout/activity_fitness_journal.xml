@@ -32,9 +32,9 @@
         android:paddingTop="16dp"
         android:paddingBottom="16dp" />
 
-    <!--User Goal-->
+    <!--User Fitness Goal-->
     <EditText
-        android:id="@+id/user_goal_edit_text"
+        android:id="@+id/user_fitness_goal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -48,53 +48,40 @@
         android:ems="25"
         android:imeOptions="actionDone" />
 
-    <!--&lt;!&ndash;Fitness Goal Save Button&ndash;&gt;-->
-    <!--<Button-->
-        <!--android:id="@+id/save_button_fitness_goal"-->
-        <!--android:text="@string/save"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_toRightOf="@id/user_goal_edit_text"-->
-        <!--android:layout_alignBottom="@id/user_goal_edit_text"-->
-        <!--android:layout_marginRight="16dp"-->
-        <!--android:paddingTop="16dp"-->
-        <!--android:paddingBottom="16dp"-->
-        <!--android:onClick="saveFitnessGoal" />-->
-
-    <!--User Weight Title-->
+    <!--Starting Weight Title-->
     <TextView
-        android:id="@+id/user_weight_title"
+        android:id="@+id/starting_weight_title"
         android:text="@string/weight_starting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@id/user_goal_edit_text"
+        android:layout_below="@id/user_fitness_goal"
         android:layout_marginLeft="16dp"
         android:paddingTop="16dp"
         android:paddingBottom="16dp" />
 
-    <!--User Weight-->
+    <!--User Starting Weight-->
     <EditText
-        android:id="@+id/user_weight_edit_text"
+        android:id="@+id/user_starting_weight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/user_goal_edit_text"
-        android:layout_toRightOf="@id/user_weight_title"
-        android:layout_alignBottom="@id/user_weight_title"
+        android:layout_below="@id/user_fitness_goal"
+        android:layout_toRightOf="@id/starting_weight_title"
+        android:layout_alignBottom="@id/starting_weight_title"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
         android:inputType="number"
         android:ems="3" />
 
-    <!--Weight Label-->
+    <!--Starting Weight Label-->
     <TextView
-        android:id="@+id/user_weight_label"
+        android:id="@+id/starting_weight_label"
         android:text="@string/lbs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/user_goal_edit_text"
-        android:layout_toRightOf="@id/user_weight_edit_text"
-        android:layout_alignBottom="@id/user_weight_edit_text"
+        android:layout_below="@id/user_fitness_goal"
+        android:layout_toRightOf="@id/user_starting_weight"
+        android:layout_alignBottom="@id/user_starting_weight"
         android:paddingTop="16dp"
         android:paddingBottom="16dp" />
 
@@ -102,14 +89,14 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_below="@id/user_weight_title"
+        android:layout_below="@id/starting_weight_title"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:background="#FF909090" />
 
-    <!--User Progress Title-->
+    <!--My Progress Title-->
     <TextView
-        android:id="@+id/user_progress_title"
+        android:id="@+id/my_progress_title"
         android:text="@string/my_progress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -119,32 +106,32 @@
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
         android:layout_alignParentLeft="true"
-        android:layout_below="@id/user_weight_label"
+        android:layout_below="@id/starting_weight_label"
         android:textSize="16sp"
         android:textStyle="bold"
         android:textColor="@color/colorPrimary" />
 
     <!--Number of Workouts Tracked Label-->
     <TextView
-        android:id="@+id/number_of_workouts_tracked_label"
+        android:id="@+id/number_workouts_tracked_label"
         android:text="@string/number_of_workouts_tracked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_alignParentLeft="true"
-        android:layout_below="@id/user_progress_title"
+        android:layout_below="@id/my_progress_title"
         android:paddingTop="16dp"
         android:paddingBottom="16dp" />
 
-    <!--Number of Workouts Tracked-->
+    <!--User Number of Workouts Tracked-->
     <EditText
-        android:id="@+id/number_of_workouts_tracked_edit_text"
+        android:id="@+id/user_number_workouts_tracked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
-        android:layout_below="@id/user_progress_title"
-        android:layout_alignBottom="@id/number_of_workouts_tracked_label"
-        android:layout_toRightOf="@id/number_of_workouts_tracked_label"
+        android:layout_below="@id/my_progress_title"
+        android:layout_alignBottom="@id/number_workouts_tracked_label"
+        android:layout_toRightOf="@id/number_workouts_tracked_label"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
         android:inputType="number"
@@ -152,7 +139,7 @@
 
     <!--Recent Activity Title-->
     <TextView
-        android:id="@+id/recent_activity"
+        android:id="@+id/recent_activity_title"
         android:text="@string/recent_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -161,20 +148,6 @@
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
         android:layout_alignParentLeft="true"
-        android:layout_below="@id/number_of_workouts_tracked_edit_text" />
-
-    <!--&lt;!&ndash;Save Button&ndash;&gt;-->
-    <!--<Button-->
-        <!--android:id="@+id/save_button_fitness_journal"-->
-        <!--android:text="@string/save"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="16dp"-->
-        <!--android:layout_marginBottom="16dp"-->
-        <!--android:layout_marginRight="16dp"-->
-        <!--android:padding="12dp"-->
-        <!--android:layout_alignParentRight="true"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:onClick="saveFitnessJournalInfo" />-->
+        android:layout_below="@id/user_number_workouts_tracked" />
 
 </RelativeLayout>
