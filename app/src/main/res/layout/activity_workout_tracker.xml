@@ -20,9 +20,10 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
+    <!--Workout Date Button-->
     <Button
-        android:id="@+id/date_button"
-        android:text="@string/date_button"
+        android:id="@+id/workout_date_button"
+        android:text="@string/set_workout_date_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -34,9 +35,9 @@
         android:layout_below="@id/fz_toolbar"
         android:onClick="showDatePickerDialog" />
 
-    <!--User Weight Title-->
+    <!--Current Weight Title-->
     <TextView
-        android:id="@+id/starting_weight_title"
+        android:id="@+id/current_weight_title"
         android:text="@string/weight_current"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,34 +45,35 @@
         android:paddingBottom="16dp"
         android:paddingLeft="3dp"
         android:layout_alignParentLeft="true"
-        android:layout_below="@id/date_button" />
+        android:layout_below="@id/workout_date_button" />
 
-    <!--User Weight-->
+    <!--User Current Weight-->
     <EditText
-        android:id="@+id/user_starting_weight"
+        android:id="@+id/user_current_weight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
         android:paddingLeft="3dp"
-        android:layout_below="@id/date_button"
-        android:layout_toRightOf="@id/starting_weight_title"
-        android:layout_alignBottom="@id/starting_weight_title"
+        android:layout_below="@id/workout_date_button"
+        android:layout_toRightOf="@id/current_weight_title"
+        android:layout_alignBottom="@id/current_weight_title"
         android:inputType="number"
         android:ems="3" />
 
-    <!--Weight Label-->
+    <!--Current Weight Label-->
     <TextView
-        android:id="@+id/starting_weight_label"
+        android:id="@+id/current_weight_label"
         android:text="@string/lbs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
-        android:layout_below="@id/date_button"
-        android:layout_toRightOf="@id/user_starting_weight"
-        android:layout_alignBottom="@id/user_starting_weight" />
+        android:layout_below="@id/workout_date_button"
+        android:layout_toRightOf="@id/user_current_weight"
+        android:layout_alignBottom="@id/user_current_weight" />
 
+    <!--Today's Focus/Checkbox Label-->
     <TextView
         android:id="@+id/todays_focus"
         android:text="@string/todays_focus"
@@ -82,8 +84,9 @@
         android:paddingBottom="16dp"
         android:paddingLeft="3dp"
         android:layout_alignParentLeft="true"
-        android:layout_below="@id/starting_weight_title" />
+        android:layout_below="@id/current_weight_title" />
 
+    <!--Arm Checkbox-->
     <CheckBox
         android:id="@+id/arms"
         android:text="@string/arms"
@@ -92,11 +95,12 @@
         android:layout_marginRight="8dp"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
-        android:layout_below="@id/starting_weight_title"
+        android:layout_below="@id/current_weight_title"
         android:layout_toRightOf="@id/todays_focus"
         android:layout_alignBaseline="@id/todays_focus"
         android:onClick="onCheckboxClicked" />
 
+    <!--Leg Checkbox-->
     <CheckBox
         android:id="@+id/legs"
         android:text="@string/legs"
@@ -105,11 +109,12 @@
         android:layout_marginRight="8dp"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
-        android:layout_below="@id/starting_weight_title"
+        android:layout_below="@id/current_weight_title"
         android:layout_toRightOf="@id/arms"
         android:layout_alignBaseline="@id/todays_focus"
         android:onClick="onCheckboxClicked" />
 
+    <!--Cardio Checkbox-->
     <CheckBox
         android:id="@+id/cardio"
         android:text="@string/cardio"
@@ -117,11 +122,12 @@
         android:layout_height="wrap_content"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
-        android:layout_below="@id/starting_weight_title"
+        android:layout_below="@id/current_weight_title"
         android:layout_toRightOf="@id/legs"
         android:layout_alignBaseline="@id/todays_focus"
         android:onClick="onCheckboxClicked" />
 
+    <!--Workout Tracker Table-->
     <TableLayout
         android:id="@+id/workout_tracker_table"
         android:layout_width="match_parent"
@@ -139,9 +145,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="3dp"
-                android:layout_span="2"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:layout_span="2" />
             <TextView
                 android:id="@+id/reps_set1_label"
                 android:text="@string/reps_set1"
@@ -214,7 +218,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="3dp"
-                android:layout_span="2"/>
+                android:layout_span="2" />
             <EditText
                 android:id="@+id/reps_set1_text2"
                 android:layout_width="wrap_content"
@@ -252,7 +256,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="3dp"
-                android:layout_span="2"/>
+                android:layout_span="2" />
             <EditText
                 android:id="@+id/reps_set1_text3"
                 android:layout_width="wrap_content"
@@ -290,7 +294,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="3dp"
-                android:layout_span="2"/>
+                android:layout_span="2" />
             <EditText
                 android:id="@+id/reps_set1_text4"
                 android:layout_width="wrap_content"
@@ -328,7 +332,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="3dp"
-                android:layout_span="2"/>
+                android:layout_span="2" />
             <EditText
                 android:id="@+id/reps_set1_text5"
                 android:layout_width="wrap_content"
@@ -359,19 +363,5 @@
         </TableRow>
 
     </TableLayout>
-
-    <!--Save Button-->
-    <Button
-        android:id="@+id/save_button_workout_tracker"
-        android:text="@string/save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginRight="16dp"
-        android:padding="12dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:onClick="saveWorkoutTrackerInfo" />
 
 </RelativeLayout>

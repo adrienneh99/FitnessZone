@@ -62,8 +62,8 @@ public class LocationActivity extends AppCompatActivity
         ab.setDisplayHomeAsUpEnabled(true);
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment =
-                (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
         // Loading the locations from the json file in the raw resource folder
@@ -73,8 +73,8 @@ public class LocationActivity extends AppCompatActivity
         locations = gson.fromJson(rd, Location[].class);
     }
 
-    // Load up all the locations, create bounds that include all map locations, add a marker for
-    // each location, and center the camera within the bounds.
+    // Load up all the locations, create bounds that include all map locations, add a
+    // marker for each location, and center the camera within the bounds.
     private void setUpMap() {
         boundsBuilder = new LatLngBounds.Builder();
 
@@ -84,7 +84,8 @@ public class LocationActivity extends AppCompatActivity
             boundsBuilder.include(latLng);
         }
         mMap.moveCamera(CameraUpdateFactory.newLatLngBounds(boundsBuilder.build(), 20));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(boundsBuilder.build().getCenter(), 15));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(boundsBuilder.build().
+                getCenter(), 15));
     }
 
     @Override
@@ -95,16 +96,16 @@ public class LocationActivity extends AppCompatActivity
         enableMyLocation();
         setUpMap();
 
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-                == PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission
+                .ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             mMap.setMyLocationEnabled(true);
         }
     }
 
     // Enables the My Location layer if the fine location permission has been granted
     private void enableMyLocation() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission
+                .ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // Permission to access the location is missing
             PermissionUtils.requestPermission(this, LOCATION_PERMISSION_REQUEST_CODE,
                     Manifest.permission.ACCESS_FINE_LOCATION, true);
@@ -151,8 +152,8 @@ public class LocationActivity extends AppCompatActivity
     }
 
     private void showMissingPermissionError() {
-        PermissionUtils.PermissionDeniedDialog.newInstance(true).show(getSupportFragmentManager(),
-                "dialog");
+        PermissionUtils.PermissionDeniedDialog.newInstance(true)
+                .show(getSupportFragmentManager(), "dialog");
     }
 
 }

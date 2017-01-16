@@ -9,6 +9,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.Toast;
+
 import com.google.gson.Gson;
 import org.tpl.fitnesszone.R;
 import org.tpl.fitnesszone.model.FitnessJournal;
@@ -16,7 +18,7 @@ import java.io.FileOutputStream;
 
 public class FitnessJournalActivity extends AppCompatActivity {
 
-    private FitnessJournal userFitnessJournal;
+    private FitnessJournal userFitnessJournal = new FitnessJournal();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +34,6 @@ public class FitnessJournalActivity extends AppCompatActivity {
 
         // Enable the Up button
         ab.setDisplayHomeAsUpEnabled(true);
-
-        userFitnessJournal = new FitnessJournal();
     }
 
     @Override
@@ -52,14 +52,19 @@ public class FitnessJournalActivity extends AppCompatActivity {
 
         EditText userStartingWeight = (EditText) findViewById(R.id.user_starting_weight);
         if (userStartingWeight.getText() != null) {
-            userFitnessJournal.setStartingWeight(Integer.parseInt(userStartingWeight.getText().toString()));
+            userFitnessJournal.
+                    setStartingWeight(Integer.parseInt(userStartingWeight.getText().toString()));
         }
     }
 
     // onClick menu item method to save the user's fitness goal and starting weight
     public void saveFitnessJournal(MenuItem item) {
+
+        setUserFitnessJournal();
+
         // Create a Gson object to handle the Java to JSON serialization
         Gson gson = new Gson();
+
         // Convert the userFitnessJournal object to JSON
         String fitnessJournalJson = gson.toJson(userFitnessJournal);
 
@@ -74,5 +79,14 @@ public class FitnessJournalActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        CharSequence text = "Fitness goal saved as: " + userFitnessJournal.getFitnessGoal() +
+                "\n" +
+                "\n" +
+                "Starting weight saved as: " + userFitnessJournal.getStartingWeight();
+        int duration = Toast.LENGTH_LONG;
+
+        Toast.makeText(this, text, duration).show();
     }
+
 }

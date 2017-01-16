@@ -1,29 +1,29 @@
 package org.tpl.fitnesszone.model;
 
-import java.util.Date;
+import java.util.Calendar;
 import java.util.List;
 
 public class WorkoutTracker {
 
-    Date entryDate;
+    Calendar workoutDate;
     int currentWeight;
     boolean armFocus;
     boolean legFocus;
     boolean cardioFocus;
     List<Workout> workouts;
 
-    WorkoutTracker() {
+    public WorkoutTracker() {
         armFocus = false;
         legFocus = false;
         cardioFocus = false;
     }
 
-    public Date getEntryDate() {
-        return entryDate;
+    public Calendar getWorkoutDate() {
+        return workoutDate;
     }
 
-    public void setEntryDate(Date entryDate) {
-        this.entryDate = entryDate;
+    public void setWorkoutDate(Calendar workoutDate) {
+        this.workoutDate = workoutDate;
     }
 
     public int getCurrentWeight() {

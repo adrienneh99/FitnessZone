@@ -1,6 +1,5 @@
 package org.tpl.fitnesszone.model;
 
-
 public class FitnessJournal {
 
     private String fitnessGoal;

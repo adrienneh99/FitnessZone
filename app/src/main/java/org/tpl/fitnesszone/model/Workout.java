@@ -1,6 +1,5 @@
 package org.tpl.fitnesszone.model;
 
-
 public class Workout {
 
     String exerciseName;
@@ -9,7 +8,7 @@ public class Workout {
     int repsSet3;
     String cardioTime;
 
-    Workout() {
+    public Workout() {
 
     }
 
@@ -53,5 +52,3 @@ public class Workout {
         this.cardioTime = cardioTime;
     }
 }
-
-

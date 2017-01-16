@@ -22,7 +22,6 @@
         Activity:</string>
     <string name="cultivate_health">Cultivate Health, Regis University</string>
     <string name="daily_workout_tracker">Daily Workout Tracker</string>
-    <string name="date_button">DATE</string>
     <string name="developer_button_text">Developer biography.\nLearn more</string>
     <string name="developer_text">Click here to learn more about the Developer</string>
     <string name="developer_title">Developer</string>
@@ -70,6 +69,7 @@
     <string name="saturday">Saturday</string>
     <string name="save">SAVE</string>
     <string name="select_your_workout">Select Your Workout</string>
+    <string name="set_workout_date_button">SET WORKOUT DATE</string>
     <string name="sets">Sets:\u0020\u0020</string>
     <string name="strength_building">STRENGTH-BUILDING</string>
     <string name="strength_building_duration">(minimum 10 minutes a day)</string>
