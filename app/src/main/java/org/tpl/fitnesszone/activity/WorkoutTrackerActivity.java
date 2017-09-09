@@ -7,16 +7,19 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -31,6 +34,7 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -50,6 +54,8 @@ public class WorkoutTrackerActivity extends AppCompatActivity
     private Spinner spinner3;
     private Spinner spinner4;
     private Spinner spinner5;
+    private EquipmentExercise[] equipmentExercises;
+    private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM-dd-yyyy");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,8 +135,6 @@ public class WorkoutTrackerActivity extends AppCompatActivity
         userWorkoutTracker.setWorkoutDate(calendar);
     }
 
-    private EquipmentExercise[] equipmentExercises;
-
     // Load equipmentExercise info from the json file in the raw resource folder
     // and then use info to populate each spinner with the exercise names.
     private void initializeData() {
@@ -176,6 +180,46 @@ public class WorkoutTrackerActivity extends AppCompatActivity
     // implementation
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    // Method to handle the click events for the arm, leg, and cardio checkboxes
+    public void onCheckboxClicked(View view) {
+
+        // Determine if the checkbox is clicked
+        // Returns true if the checkbox is checked
+        // Returns false if the checkbox is not checked
+        boolean checked = ((CheckBox) view).isChecked();
+
+        switch (view.getId()) {
+            case R.id.arms:
+                userWorkoutTracker.setArmFocus(checked);
+                break;
+            case R.id.legs:
+                userWorkoutTracker.setLegFocus(checked);
+                break;
+            case R.id.cardio:
+                userWorkoutTracker.setCardioFocus(checked);
+                break;
+        }
+    }
+
+    public void setUserCurrentWeight() {
+        EditText userCurrentWeight = (EditText) findViewById(R.id.user_current_weight);
+
+        userCurrentWeight.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handled = false;
+                if(actionId == EditorInfo.IME_ACTION_DONE){
+                    handled = true;
+                }
+                return handled;
+            }
+        });
+
+        if ((userCurrentWeight.getText() != null) && !(userCurrentWeight.getText().toString().equals(""))) {
+            userWorkoutTracker.setCurrentWeight(Integer.parseInt(userCurrentWeight.getText().toString()));
+        }
     }
 
     // Get user reps sets 1,2,3 and user cardio time and assign them to the userWorkout
@@ -287,32 +331,6 @@ public class WorkoutTrackerActivity extends AppCompatActivity
         }
     }
 
-    // Method to handle the click events for the arm, leg, and cardio checkboxes
-    public void onCheckboxClicked(View view) {
-
-        // Determine if the checkbox is clicked
-        boolean checked = ((CheckBox) view).isChecked();
-
-        switch (view.getId()) {
-            case R.id.arms:
-                userWorkoutTracker.setArmFocus(checked);
-                break;
-            case R.id.legs:
-                userWorkoutTracker.setLegFocus(checked);
-                break;
-            case R.id.cardio:
-                userWorkoutTracker.setCardioFocus(checked);
-                break;
-        }
-    }
-
-    public void setUserCurrentWeight() {
-        EditText userCurrentWeight = (EditText) findViewById(R.id.user_current_weight);
-        if ((userCurrentWeight.getText() != null) && !(userCurrentWeight.getText().toString().equals(""))) {
-            userWorkoutTracker.setCurrentWeight(Integer.parseInt(userCurrentWeight.getText().toString()));
-        }
-    }
-
     // onClick menu item method to save the user's workout tracker info
     public void saveWorkoutTracker(MenuItem item) {
 
@@ -338,19 +356,54 @@ public class WorkoutTrackerActivity extends AppCompatActivity
             e.printStackTrace();
         }
 
-        CharSequence text = "Workout date saved as: " + userWorkoutTracker.getWorkoutDate() +
+        String todaysArmFocus = "";
+        String todaysLegFocus = "";
+        String todaysCardioFocus = "";
+
+        if (userWorkoutTracker.isArmFocus() && (userWorkoutTracker.isLegFocus() || userWorkoutTracker.isCardioFocus())){
+            todaysArmFocus = "Arms, ";
+        }
+        else if (userWorkoutTracker.isArmFocus() && (!userWorkoutTracker.isLegFocus() || !userWorkoutTracker.isCardioFocus())){
+            todaysArmFocus = "Arms";
+        }
+        else if (!userWorkoutTracker.isArmFocus() && (userWorkoutTracker.isLegFocus() || userWorkoutTracker.isCardioFocus())){
+            todaysArmFocus = "";
+        };
+
+        if (userWorkoutTracker.isLegFocus() && userWorkoutTracker.isCardioFocus()){
+            todaysLegFocus = "Legs, ";
+        }
+        else if (userWorkoutTracker.isLegFocus() && (!userWorkoutTracker.isArmFocus() || !userWorkoutTracker.isCardioFocus())){
+            todaysLegFocus = "Legs";
+        }
+        else if (!userWorkoutTracker.isLegFocus()){
+            todaysLegFocus = "";
+        };
+
+        if (userWorkoutTracker.isCardioFocus()){
+            todaysCardioFocus = "Cardio";
+        }
+        else if (!userWorkoutTracker.isCardioFocus()){
+            todaysCardioFocus = "";
+        };
+
+
+        CharSequence text = "Congratulations! Your workout has been saved." +
                 "\n" +
                 "\n" +
-                "Current weight saved as: " + userWorkoutTracker.getCurrentWeight() +
+                "Workout date: " + simpleDateFormat.format(userWorkoutTracker.getWorkoutDate().getTime()) +
                 "\n" +
                 "\n" +
-                "Today's focus saved as: " +
-                userWorkoutTracker.isArmFocus() + ", " +
-                userWorkoutTracker.isLegFocus() + ", " +
-                userWorkoutTracker.isCardioFocus() +
+                "Current weight: " + userWorkoutTracker.getCurrentWeight() +
                 "\n" +
                 "\n" +
-                "Today's exercises saved as: " +
+                "Today's focus: " +
+                todaysArmFocus +
+                todaysLegFocus +
+                todaysCardioFocus +
+                "\n" +
+                "\n" +
+                "Today's exercises: " +
                 userWorkout.get(0).getExerciseName() + " " +
                 userWorkout.get(0).getRepsSet1() + " " +
                 userWorkout.get(0).getRepsSet2() + " " +

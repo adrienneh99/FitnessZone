@@ -59,6 +59,7 @@
         android:layout_toRightOf="@id/current_weight_title"
         android:layout_alignBottom="@id/current_weight_title"
         android:inputType="number"
+        android:imeOptions="actionDone"
         android:ems="3" />
 
     <!--Current Weight Label-->
