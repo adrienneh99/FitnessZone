@@ -16,6 +16,7 @@
         \n\u2022 Read and understand all exercise instructions.</string>
     <string name="before_you_start_title">Before You Start</string>
     <string name="cardio">Cardio</string>
+    <string name="cardio_time">Cardio\nTime</string>
     <string name="cardio_workout">Cardio Workout</string>
     <string name="choose_an_exercise">Choose An Exercise</string>
     <string name="complete_exercise_program">A Complete Exercise Program Includes 3 Types of
@@ -48,7 +49,7 @@
     <string name="health_benefits">Health Benefits</string>
     <string name="instructions">Instructions For Use</string>
     <string name="learn_more">Learn More</string>
-    <string name="lbs">(lbs)</string>
+    <string name="lbs">lbs</string>
     <string name="legs">Legs</string>
     <string name="leg_workout">Leg Workout</string>
     <string name="monday">Monday</string>

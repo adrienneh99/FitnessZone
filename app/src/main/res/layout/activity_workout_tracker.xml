@@ -167,7 +167,7 @@
                 android:padding="3dp"/>
             <TextView
                 android:id="@+id/cardio_label"
-                android:text="@string/cardio"
+                android:text="@string/cardio_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="3dp"/>
@@ -177,37 +177,41 @@
         <TableRow
             android:weightSum="1">
             <Spinner
-                android:id="@+id/exercise_spinner1"
+                android:id="@+id/exercise1_spinner1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="3dp"
                 android:layout_span="2" />
             <EditText
-                android:id="@+id/reps_set1_text1"
+                android:id="@+id/exercise1_reps_set1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:imeOptions="actionNext"
                 android:padding="3dp"
                 android:ems="3"/>
             <EditText
-                android:id="@+id/reps_set2_text1"
+                android:id="@+id/exercise1_reps_set2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:imeOptions="actionNext"
                 android:padding="3dp"
                 android:ems="3"/>
             <EditText
-                android:id="@+id/reps_set3_text1"
+                android:id="@+id/exercise1_reps_set3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:imeOptions="actionNext"
                 android:padding="3dp"
                 android:ems="3"/>
             <EditText
-                android:id="@+id/cardio_time_text1"
+                android:id="@+id/exercise1_cardio_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="time"
+                android:imeOptions="actionDone"
                 android:padding="3dp"/>
         </TableRow>
 
@@ -215,37 +219,41 @@
         <TableRow
             android:weightSum="1">
             <Spinner
-                android:id="@+id/exercise_spinner2"
+                android:id="@+id/exercise2_spinner2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="3dp"
                 android:layout_span="2" />
             <EditText
-                android:id="@+id/reps_set1_text2"
+                android:id="@+id/exercise2_reps_set1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:imeOptions="actionNext"
                 android:padding="3dp"
                 android:ems="3"/>
             <EditText
-                android:id="@+id/reps_set2_text2"
+                android:id="@+id/exercise2_reps_set2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:imeOptions="actionNext"
                 android:padding="3dp"
                 android:ems="3"/>
             <EditText
-                android:id="@+id/reps_set3_text2"
+                android:id="@+id/exercise2_reps_set3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:imeOptions="actionNext"
                 android:padding="3dp"
                 android:ems="3"/>
             <EditText
-                android:id="@+id/cardio_time_text2"
+                android:id="@+id/exercise2_cardio_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="time"
+                android:imeOptions="actionDone"
                 android:padding="3dp"/>
         </TableRow>
 
@@ -253,37 +261,41 @@
         <TableRow
             android:weightSum="1">
             <Spinner
-                android:id="@+id/exercise_spinner3"
+                android:id="@+id/exercise3_spinner3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="3dp"
                 android:layout_span="2" />
             <EditText
-                android:id="@+id/reps_set1_text3"
+                android:id="@+id/exercise3_reps_set1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:imeOptions="actionNext"
                 android:padding="3dp"
                 android:ems="3"/>
             <EditText
-                android:id="@+id/reps_set2_text3"
+                android:id="@+id/exercise3_reps_set2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:imeOptions="actionNext"
                 android:padding="3dp"
                 android:ems="3"/>
             <EditText
-                android:id="@+id/reps_set3_text3"
+                android:id="@+id/exercise3_reps_set3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:imeOptions="actionNext"
                 android:padding="3dp"
                 android:ems="3"/>
             <EditText
-                android:id="@+id/cardio_time_text3"
+                android:id="@+id/exercise3_cardio_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="time"
+                android:imeOptions="actionDone"
                 android:padding="3dp"/>
         </TableRow>
 
@@ -291,37 +303,41 @@
         <TableRow
             android:weightSum="1">
             <Spinner
-                android:id="@+id/exercise_spinner4"
+                android:id="@+id/exercise4_spinner4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="3dp"
                 android:layout_span="2" />
             <EditText
-                android:id="@+id/reps_set1_text4"
+                android:id="@+id/exercise4_reps_set1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:imeOptions="actionNext"
                 android:padding="3dp"
                 android:ems="3"/>
             <EditText
-                android:id="@+id/reps_set2_text4"
+                android:id="@+id/exercise4_reps_set2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:imeOptions="actionNext"
                 android:padding="3dp"
                 android:ems="3"/>
             <EditText
-                android:id="@+id/reps_set3_text4"
+                android:id="@+id/exercise4_reps_set3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:imeOptions="actionNext"
                 android:padding="3dp"
                 android:ems="3"/>
             <EditText
-                android:id="@+id/cardio_time_text4"
+                android:id="@+id/exercise4_cardio_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="time"
+                android:imeOptions="actionDone"
                 android:padding="3dp"/>
         </TableRow>
 
@@ -329,37 +345,41 @@
         <TableRow
             android:weightSum="1">
             <Spinner
-                android:id="@+id/exercise_spinner5"
+                android:id="@+id/exercise5_spinner5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="3dp"
                 android:layout_span="2" />
             <EditText
-                android:id="@+id/reps_set1_text5"
+                android:id="@+id/exercise5_reps_set1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:imeOptions="actionNext"
                 android:padding="3dp"
                 android:ems="3"/>
             <EditText
-                android:id="@+id/reps_set2_text5"
+                android:id="@+id/exercise5_reps_set2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:imeOptions="actionNext"
                 android:padding="3dp"
                 android:ems="3"/>
             <EditText
-                android:id="@+id/reps_set3_text5"
+                android:id="@+id/exercise5_reps_set3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:imeOptions="actionNext"
                 android:padding="3dp"
                 android:ems="3"/>
             <EditText
-                android:id="@+id/cardio_time_text5"
+                android:id="@+id/exercise5_cardio_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="time"
+                android:imeOptions="actionDone"
                 android:padding="3dp"/>
         </TableRow>
 

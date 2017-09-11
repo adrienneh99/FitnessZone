@@ -3,6 +3,7 @@ package org.tpl.fitnesszone.activity;
 import android.app.DatePickerDialog;
 import android.app.DialogFragment;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -79,11 +80,11 @@ public class WorkoutTrackerActivity extends AppCompatActivity
         initializeData();
 
         // Supply each spinner with the array using an instance of ArrayAdapter
-        spinner1 = (Spinner) findViewById(R.id.exercise_spinner1);
-        spinner2 = (Spinner) findViewById(R.id.exercise_spinner2);
-        spinner3 = (Spinner) findViewById(R.id.exercise_spinner3);
-        spinner4 = (Spinner) findViewById(R.id.exercise_spinner4);
-        spinner5 = (Spinner) findViewById(R.id.exercise_spinner5);
+        spinner1 = (Spinner) findViewById(R.id.exercise1_spinner1);
+        spinner2 = (Spinner) findViewById(R.id.exercise2_spinner2);
+        spinner3 = (Spinner) findViewById(R.id.exercise3_spinner3);
+        spinner4 = (Spinner) findViewById(R.id.exercise4_spinner4);
+        spinner5 = (Spinner) findViewById(R.id.exercise5_spinner5);
 
         // Create a new ArrayList and populate it with the exercise names
         ArrayList<String> equipmentExerciseNames = new ArrayList<String>();
@@ -149,27 +150,27 @@ public class WorkoutTrackerActivity extends AppCompatActivity
     // and assign it to the corresponding userWorkout exerciseName
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        if (parent.getId() == R.id.exercise_spinner1)
+        if (parent.getId() == R.id.exercise1_spinner1)
         {
             String spinner1Item = parent.getItemAtPosition(position).toString();
             userWorkout.get(0).setExerciseName(spinner1Item);
         }
-        else if (parent.getId() == R.id.exercise_spinner2)
+        else if (parent.getId() == R.id.exercise2_spinner2)
         {
             String spinner2Item = parent.getItemAtPosition(position).toString();
             userWorkout.get(1).setExerciseName(spinner2Item);
         }
-        else if (parent.getId() == R.id.exercise_spinner3)
+        else if (parent.getId() == R.id.exercise3_spinner3)
         {
             String spinner3Item = parent.getItemAtPosition(position).toString();
             userWorkout.get(2).setExerciseName(spinner3Item);
         }
-        else if (parent.getId() == R.id.exercise_spinner4)
+        else if (parent.getId() == R.id.exercise4_spinner4)
         {
             String spinner4Item = parent.getItemAtPosition(position).toString();
             userWorkout.get(3).setExerciseName(spinner4Item);
         }
-        else if (parent.getId() == R.id.exercise_spinner5)
+        else if (parent.getId() == R.id.exercise5_spinner5)
         {
             String spinner5Item = parent.getItemAtPosition(position).toString();
             userWorkout.get(4).setExerciseName(spinner5Item);
@@ -205,7 +206,6 @@ public class WorkoutTrackerActivity extends AppCompatActivity
 
     public void setUserCurrentWeight() {
         EditText userCurrentWeight = (EditText) findViewById(R.id.user_current_weight);
-
         userCurrentWeight.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -216,7 +216,6 @@ public class WorkoutTrackerActivity extends AppCompatActivity
                 return handled;
             }
         });
-
         if ((userCurrentWeight.getText() != null) && !(userCurrentWeight.getText().toString().equals(""))) {
             userWorkoutTracker.setCurrentWeight(Integer.parseInt(userCurrentWeight.getText().toString()));
         }
@@ -226,108 +225,333 @@ public class WorkoutTrackerActivity extends AppCompatActivity
     public void setUserRepsAndCardioTime() {
 
         // Get row 1 (array index 0)
-        EditText userRepsSet1Text1 = (EditText) findViewById(R.id.reps_set1_text1);
-        if ((userRepsSet1Text1.getText() != null) && !(userRepsSet1Text1.getText().toString().equals(""))) {
-            userWorkout.get(0).setRepsSet1(Integer.parseInt(userRepsSet1Text1.getText().toString()));
+
+        // Exercise 1, Reps Set 1
+        EditText exercise1RepsSet1 = (EditText) findViewById(R.id.exercise1_reps_set1);
+        exercise1RepsSet1.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handledExercise1RepsSet1 = false;
+                if(actionId == EditorInfo.IME_ACTION_NEXT){
+                    handledExercise1RepsSet1 = true;
+                }
+                return handledExercise1RepsSet1;
+            }
+        });
+        if ((exercise1RepsSet1.getText() != null) && !(exercise1RepsSet1.getText().toString().equals(""))) {
+            userWorkout.get(0).setRepsSet1(Integer.parseInt(exercise1RepsSet1.getText().toString()));
         }
 
-        EditText userRepsSet2Text1 = (EditText) findViewById(R.id.reps_set2_text1);
-        if ((userRepsSet2Text1.getText() != null) && !(userRepsSet2Text1.getText().toString().equals(""))) {
-            userWorkout.get(0).setRepsSet2(Integer.parseInt(userRepsSet2Text1.getText().toString()));
+        // Exercise 1, Reps Set 2
+        EditText exercise1RepsSet2 = (EditText) findViewById(R.id.exercise1_reps_set2);
+        exercise1RepsSet2.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handledExercise1RepsSet2 = false;
+                if(actionId == EditorInfo.IME_ACTION_NEXT){
+                    handledExercise1RepsSet2 = true;
+                }
+                return handledExercise1RepsSet2;
+            }
+        });
+        if ((exercise1RepsSet2.getText() != null) && !(exercise1RepsSet2.getText().toString().equals(""))) {
+            userWorkout.get(0).setRepsSet2(Integer.parseInt(exercise1RepsSet2.getText().toString()));
         }
 
-        EditText userRepsSet3Text1 = (EditText) findViewById(R.id.reps_set3_text1);
-        if ((userRepsSet3Text1.getText() != null) && !(userRepsSet3Text1.getText().toString().equals(""))) {
-            userWorkout.get(0).setRepsSet3(Integer.parseInt(userRepsSet3Text1.getText().toString()));
+        // Exercise 1, Reps Set 3
+        EditText exercise1RepsSet3 = (EditText) findViewById(R.id.exercise1_reps_set3);
+        exercise1RepsSet3.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handledExercise1RepsSet3 = false;
+                if(actionId == EditorInfo.IME_ACTION_NEXT){
+                    handledExercise1RepsSet3 = true;
+                }
+                return handledExercise1RepsSet3;
+            }
+        });
+        if ((exercise1RepsSet3.getText() != null) && !(exercise1RepsSet3.getText().toString().equals(""))) {
+            userWorkout.get(0).setRepsSet3(Integer.parseInt(exercise1RepsSet3.getText().toString()));
         }
 
-        EditText userCardioTimeText1 = (EditText) findViewById(R.id.cardio_time_text1);
-        if (userCardioTimeText1.getText() != null) {
-            userWorkout.get(0).setCardioTime(userCardioTimeText1.getText().toString());
+        // Exercise 1, Cardio Time
+        EditText exercise1CardioTime = (EditText) findViewById(R.id.exercise1_cardio_time);
+        exercise1CardioTime.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handledExercise1CardioTime = false;
+                if(actionId == EditorInfo.IME_ACTION_DONE){
+                    handledExercise1CardioTime = true;
+                }
+                return handledExercise1CardioTime;
+            }
+        });
+        if (exercise1CardioTime.getText() != null) {
+            userWorkout.get(0).setCardioTime(exercise1CardioTime.getText().toString());
         }
 
         // Get row 2 (array index 1)
-        EditText userRepsSet1Text2 = (EditText) findViewById(R.id.reps_set1_text2);
-        if ((userRepsSet1Text2.getText() != null) && !(userRepsSet1Text2.getText().toString().equals(""))) {
-            userWorkout.get(1).setRepsSet1(Integer.parseInt(userRepsSet1Text2.getText().toString()));
+
+        // Exercise 2, Reps Set 1
+        EditText exercise2RepsSet1 = (EditText) findViewById(R.id.exercise2_reps_set1);
+        exercise2RepsSet1.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handledExercise2RepsSet1 = false;
+                if(actionId == EditorInfo.IME_ACTION_NEXT){
+                    handledExercise2RepsSet1 = true;
+                }
+                return handledExercise2RepsSet1;
+            }
+        });
+        if ((exercise2RepsSet1.getText() != null) && !(exercise2RepsSet1.getText().toString().equals(""))) {
+            userWorkout.get(1).setRepsSet1(Integer.parseInt(exercise2RepsSet1.getText().toString()));
         }
 
-        EditText userRepsSet2Text2 = (EditText) findViewById(R.id.reps_set2_text2);
-        if ((userRepsSet2Text2.getText() != null) && !(userRepsSet2Text2.getText().toString().equals(""))) {
-            userWorkout.get(1).setRepsSet2(Integer.parseInt(userRepsSet2Text2.getText().toString()));
+        // Exercise 2, Reps Set 2
+        EditText exercise2RepsSet2 = (EditText) findViewById(R.id.exercise2_reps_set2);
+        exercise2RepsSet2.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handledExercise2RepsSet2 = false;
+                if(actionId == EditorInfo.IME_ACTION_NEXT){
+                    handledExercise2RepsSet2 = true;
+                }
+                return handledExercise2RepsSet2;
+            }
+        });
+        if ((exercise2RepsSet2.getText() != null) && !(exercise2RepsSet2.getText().toString().equals(""))) {
+            userWorkout.get(1).setRepsSet2(Integer.parseInt(exercise2RepsSet2.getText().toString()));
         }
 
-        EditText userRepsSet3Text2 = (EditText) findViewById(R.id.reps_set3_text2);
-        if ((userRepsSet3Text2.getText() != null) && !(userRepsSet3Text2.getText().toString().equals(""))) {
-            userWorkout.get(1).setRepsSet3(Integer.parseInt(userRepsSet3Text2.getText().toString()));
+        // Exercise 2, Reps Set 3
+        EditText exercise2RepsSet3 = (EditText) findViewById(R.id.exercise2_reps_set3);
+        exercise2RepsSet3.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handledExercise2RepsSet3 = false;
+                if(actionId == EditorInfo.IME_ACTION_NEXT){
+                    handledExercise2RepsSet3 = true;
+                }
+                return handledExercise2RepsSet3;
+            }
+        });
+        if ((exercise2RepsSet3.getText() != null) && !(exercise2RepsSet3.getText().toString().equals(""))) {
+            userWorkout.get(1).setRepsSet3(Integer.parseInt(exercise2RepsSet3.getText().toString()));
         }
 
-        EditText userCardioTimeText2 = (EditText) findViewById(R.id.cardio_time_text2);
-        if (userCardioTimeText2.getText() != null) {
-            userWorkout.get(1).setCardioTime(userCardioTimeText2.getText().toString());
+        // Exercise 2, Cardio Time
+        EditText exercise2CardioTime = (EditText) findViewById(R.id.exercise2_cardio_time);
+        exercise2CardioTime.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handledExercise2CardioTime = false;
+                if(actionId == EditorInfo.IME_ACTION_DONE){
+                    handledExercise2CardioTime = true;
+                }
+                return handledExercise2CardioTime;
+            }
+        });
+        if (exercise2CardioTime.getText() != null) {
+            userWorkout.get(1).setCardioTime(exercise2CardioTime.getText().toString());
         }
 
         // Get row 3 (array index 2)
-        EditText userRepsSet1Text3 = (EditText) findViewById(R.id.reps_set1_text3);
-        if ((userRepsSet1Text3.getText() != null) && !(userRepsSet1Text3.getText().toString().equals(""))) {
-            userWorkout.get(2).setRepsSet1(Integer.parseInt(userRepsSet1Text3.getText().toString()));
+
+        // Exercise 3, Reps Set 1
+        EditText exercise3RepsSet1 = (EditText) findViewById(R.id.exercise3_reps_set1);
+        exercise3RepsSet1.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handledExercise3RepsSet1 = false;
+                if(actionId == EditorInfo.IME_ACTION_NEXT){
+                    handledExercise3RepsSet1 = true;
+                }
+                return handledExercise3RepsSet1;
+            }
+        });
+        if ((exercise3RepsSet1.getText() != null) && !(exercise3RepsSet1.getText().toString().equals(""))) {
+            userWorkout.get(2).setRepsSet1(Integer.parseInt(exercise3RepsSet1.getText().toString()));
         }
 
-        EditText userRepsSet2Text3 = (EditText) findViewById(R.id.reps_set2_text3);
-        if ((userRepsSet2Text3.getText() != null) && !(userRepsSet2Text3.getText().toString().equals(""))) {
-            userWorkout.get(2).setRepsSet2(Integer.parseInt(userRepsSet2Text3.getText().toString()));
+        // Exercise 3, Reps Set 2
+        EditText exercise3RepsSet2 = (EditText) findViewById(R.id.exercise3_reps_set2);
+        exercise3RepsSet2.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handledExercise3RepsSet2 = false;
+                if(actionId == EditorInfo.IME_ACTION_NEXT){
+                    handledExercise3RepsSet2 = true;
+                }
+                return handledExercise3RepsSet2;
+            }
+        });
+        if ((exercise3RepsSet2.getText() != null) && !(exercise3RepsSet2.getText().toString().equals(""))) {
+            userWorkout.get(2).setRepsSet2(Integer.parseInt(exercise3RepsSet2.getText().toString()));
         }
 
-        EditText userRepsSet3Text3 = (EditText) findViewById(R.id.reps_set3_text3);
-        if ((userRepsSet3Text3.getText() != null) && !(userRepsSet3Text3.getText().toString().equals(""))) {
-            userWorkout.get(2).setRepsSet3(Integer.parseInt(userRepsSet3Text3.getText().toString()));
+        // Exercise 3, Reps Set 3
+        EditText exercise3RepsSet3 = (EditText) findViewById(R.id.exercise3_reps_set3);
+        exercise3RepsSet3.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handledExercise3RepsSet3 = false;
+                if(actionId == EditorInfo.IME_ACTION_NEXT){
+                    handledExercise3RepsSet3 = true;
+                }
+                return handledExercise3RepsSet3;
+            }
+        });
+        if ((exercise3RepsSet3.getText() != null) && !(exercise3RepsSet3.getText().toString().equals(""))) {
+            userWorkout.get(2).setRepsSet3(Integer.parseInt(exercise3RepsSet3.getText().toString()));
         }
 
-        EditText userCardioTimeText3 = (EditText) findViewById(R.id.cardio_time_text3);
-        if (userCardioTimeText3.getText() != null) {
-            userWorkout.get(2).setCardioTime(userCardioTimeText3.getText().toString());
+        // Exercise 3, Cardio Time
+        EditText exercise3CardioTime = (EditText) findViewById(R.id.exercise3_cardio_time);
+        exercise3CardioTime.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handledExercise3CardioTime = false;
+                if(actionId == EditorInfo.IME_ACTION_DONE){
+                    handledExercise3CardioTime = true;
+                }
+                return handledExercise3CardioTime;
+            }
+        });
+        if (exercise3CardioTime.getText() != null) {
+            userWorkout.get(2).setCardioTime(exercise3CardioTime.getText().toString());
         }
 
         // Get row 4 (array index 3)
-        EditText userRepsSet1Text4 = (EditText) findViewById(R.id.reps_set1_text4);
-        if ((userRepsSet1Text4.getText() != null) && !(userRepsSet1Text4.getText().toString().equals(""))) {
-            userWorkout.get(3).setRepsSet1(Integer.parseInt(userRepsSet1Text4.getText().toString()));
+
+        // Exercise 4, Reps Set 1
+        EditText exercise4RepsSet1 = (EditText) findViewById(R.id.exercise4_reps_set1);
+        exercise4RepsSet1.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handledExercise4RepsSet1 = false;
+                if(actionId == EditorInfo.IME_ACTION_NEXT){
+                    handledExercise4RepsSet1 = true;
+                }
+                return handledExercise4RepsSet1;
+            }
+        });
+        if ((exercise4RepsSet1.getText() != null) && !(exercise4RepsSet1.getText().toString().equals(""))) {
+            userWorkout.get(3).setRepsSet1(Integer.parseInt(exercise4RepsSet1.getText().toString()));
         }
 
-        EditText userRepsSet2Text4 = (EditText) findViewById(R.id.reps_set2_text4);
-        if ((userRepsSet2Text4.getText() != null) && !(userRepsSet2Text4.getText().toString().equals(""))) {
-            userWorkout.get(3).setRepsSet2(Integer.parseInt(userRepsSet2Text4.getText().toString()));
+        // Exercise 4, Reps Set 2
+        EditText exercise4RepsSet2 = (EditText) findViewById(R.id.exercise4_reps_set2);
+        exercise4RepsSet2.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handledExercise4RepsSet2 = false;
+                if(actionId == EditorInfo.IME_ACTION_NEXT){
+                    handledExercise4RepsSet2 = true;
+                }
+                return handledExercise4RepsSet2;
+            }
+        });
+        if ((exercise4RepsSet2.getText() != null) && !(exercise4RepsSet2.getText().toString().equals(""))) {
+            userWorkout.get(3).setRepsSet2(Integer.parseInt(exercise4RepsSet2.getText().toString()));
         }
 
-        EditText userRepsSet3Text4 = (EditText) findViewById(R.id.reps_set3_text4);
-        if ((userRepsSet3Text4.getText() != null) && !(userRepsSet3Text4.getText().toString().equals(""))) {
-            userWorkout.get(3).setRepsSet3(Integer.parseInt(userRepsSet3Text4.getText().toString()));
+        // Exercise 4, Reps Set 3
+        EditText exercise4RepsSet3 = (EditText) findViewById(R.id.exercise4_reps_set3);
+        exercise4RepsSet3.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handledExercise4RepsSet3 = false;
+                if(actionId == EditorInfo.IME_ACTION_NEXT){
+                    handledExercise4RepsSet3 = true;
+                }
+                return handledExercise4RepsSet3;
+            }
+        });
+        if ((exercise4RepsSet3.getText() != null) && !(exercise4RepsSet3.getText().toString().equals(""))) {
+            userWorkout.get(3).setRepsSet3(Integer.parseInt(exercise4RepsSet3.getText().toString()));
         }
 
-        EditText userCardioTimeText4 = (EditText) findViewById(R.id.cardio_time_text4);
-        if (userCardioTimeText4.getText() != null) {
-            userWorkout.get(3).setCardioTime(userCardioTimeText4.getText().toString());
+        // Exercise 4, Cardio Time
+        EditText exercise4CardioTime = (EditText) findViewById(R.id.exercise4_cardio_time);
+        exercise4CardioTime.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handledExercise4CardioTime = false;
+                if(actionId == EditorInfo.IME_ACTION_DONE){
+                    handledExercise4CardioTime = true;
+                }
+                return handledExercise4CardioTime;
+            }
+        });
+        if (exercise4CardioTime.getText() != null) {
+            userWorkout.get(3).setCardioTime(exercise4CardioTime.getText().toString());
         }
 
         // Get row 5 (array index 4)
-        EditText userRepsSet1Text5 = (EditText) findViewById(R.id.reps_set1_text5);
-        if ((userRepsSet1Text5.getText() != null) && !(userRepsSet1Text5.getText().toString().equals(""))) {
-            userWorkout.get(4).setRepsSet1(Integer.parseInt(userRepsSet1Text5.getText().toString()));
+
+        // Exercise 5, Reps Set 1
+        EditText exercise5RepsSet1 = (EditText) findViewById(R.id.exercise5_reps_set1);
+        exercise5RepsSet1.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handledExercise5RepsSet1 = false;
+                if(actionId == EditorInfo.IME_ACTION_NEXT){
+                    handledExercise5RepsSet1 = true;
+                }
+                return handledExercise5RepsSet1;
+            }
+        });
+        if ((exercise5RepsSet1.getText() != null) && !(exercise5RepsSet1.getText().toString().equals(""))) {
+            userWorkout.get(4).setRepsSet1(Integer.parseInt(exercise5RepsSet1.getText().toString()));
         }
 
-        EditText userRepsSet2Text5 = (EditText) findViewById(R.id.reps_set2_text5);
-        if ((userRepsSet2Text5.getText() != null) && !(userRepsSet2Text5.getText().toString().equals(""))) {
-            userWorkout.get(4).setRepsSet2(Integer.parseInt(userRepsSet2Text5.getText().toString()));
+        // Exercise 5, Reps Set 2
+        EditText exercise5RepsSet2 = (EditText) findViewById(R.id.exercise5_reps_set2);
+        exercise5RepsSet2.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handledExercise5RepsSet2 = false;
+                if(actionId == EditorInfo.IME_ACTION_NEXT){
+                    handledExercise5RepsSet2 = true;
+                }
+                return handledExercise5RepsSet2;
+            }
+        });
+        if ((exercise5RepsSet2.getText() != null) && !(exercise5RepsSet2.getText().toString().equals(""))) {
+            userWorkout.get(4).setRepsSet2(Integer.parseInt(exercise5RepsSet2.getText().toString()));
         }
 
-        EditText userRepsSet3Text5 = (EditText) findViewById(R.id.reps_set3_text5);
-        if ((userRepsSet3Text5.getText() != null) && !(userRepsSet3Text5.getText().toString().equals(""))) {
-            userWorkout.get(4).setRepsSet3(Integer.parseInt(userRepsSet3Text5.getText().toString()));
+        // Exercise 5, Reps Set 3
+        EditText exercise5RepsSet3 = (EditText) findViewById(R.id.exercise5_reps_set3);
+        exercise5RepsSet3.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handledExercise5RepsSet3 = false;
+                if(actionId == EditorInfo.IME_ACTION_NEXT){
+                    handledExercise5RepsSet3 = true;
+                }
+                return handledExercise5RepsSet3;
+            }
+        });
+        if ((exercise5RepsSet3.getText() != null) && !(exercise5RepsSet3.getText().toString().equals(""))) {
+            userWorkout.get(4).setRepsSet3(Integer.parseInt(exercise5RepsSet3.getText().toString()));
         }
 
-        EditText userCardioTimeText5 = (EditText) findViewById(R.id.cardio_time_text5);
-        if (userCardioTimeText5.getText() != null) {
-            userWorkout.get(4).setCardioTime(userCardioTimeText5.getText().toString());
+        // Exercise 5, Cardio Time
+        EditText exercise5CardioTime = (EditText) findViewById(R.id.exercise5_cardio_time);
+        exercise5CardioTime.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handledExercise5CardioTime = false;
+                if(actionId == EditorInfo.IME_ACTION_DONE){
+                    handledExercise5CardioTime = true;
+                }
+                return handledExercise5CardioTime;
+            }
+        });
+        if (exercise5CardioTime.getText() != null) {
+            userWorkout.get(4).setCardioTime(exercise5CardioTime.getText().toString());
         }
     }
 
@@ -394,7 +618,7 @@ public class WorkoutTrackerActivity extends AppCompatActivity
                 "Workout date: " + simpleDateFormat.format(userWorkoutTracker.getWorkoutDate().getTime()) +
                 "\n" +
                 "\n" +
-                "Current weight: " + userWorkoutTracker.getCurrentWeight() +
+                "Current weight: " + userWorkoutTracker.getCurrentWeight() + " lbs" +
                 "\n" +
                 "\n" +
                 "Today's focus: " +
