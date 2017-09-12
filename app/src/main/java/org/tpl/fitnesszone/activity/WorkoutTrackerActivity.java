@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -626,38 +627,50 @@ public class WorkoutTrackerActivity extends AppCompatActivity
                 todaysCardioFocus +
                 "\n" +
                 "\n" +
-                "Today's exercises: " +
-                userWorkout.get(0).getExerciseName() + " " +
-                userWorkout.get(0).getRepsSet1() + " " +
-                userWorkout.get(0).getRepsSet2() + " " +
-                userWorkout.get(0).getRepsSet3() + " " +
-                userWorkout.get(0).getCardioTime() + ", " +
+                "Exercise 1: " + userWorkout.get(0).getExerciseName() +
                 "\n" +
-                userWorkout.get(1).getExerciseName() + " " +
-                userWorkout.get(1).getRepsSet1() + " " +
-                userWorkout.get(1).getRepsSet2() + " " +
-                userWorkout.get(1).getRepsSet3() + " " +
-                userWorkout.get(1).getCardioTime() + ", " +
+                "Reps: " +
+                userWorkout.get(0).getRepsSet1() + ", " +
+                userWorkout.get(0).getRepsSet2() + ", " +
+                userWorkout.get(0).getRepsSet3() +
                 "\n" +
-                userWorkout.get(2).getExerciseName() + " " +
-                userWorkout.get(2).getRepsSet1() + " " +
-                userWorkout.get(2).getRepsSet2() + " " +
-                userWorkout.get(2).getRepsSet3() + " " +
-                userWorkout.get(2).getCardioTime() + ", " +
+                "Time: " + userWorkout.get(0).getCardioTime() + " minutes" +
                 "\n" +
-                userWorkout.get(3).getExerciseName() + " " +
-                userWorkout.get(3).getRepsSet1() + " " +
-                userWorkout.get(3).getRepsSet2() + " " +
-                userWorkout.get(3).getRepsSet3() + " " +
-                userWorkout.get(3).getCardioTime() + ", " +
                 "\n" +
-                userWorkout.get(4).getExerciseName() + " " +
-                userWorkout.get(4).getRepsSet1() + " " +
-                userWorkout.get(4).getRepsSet2() + " " +
-                userWorkout.get(4).getRepsSet3() + " " +
-                userWorkout.get(4).getCardioTime() + ", ";
+                "Exercise 2: " + userWorkout.get(1).getExerciseName() + "\n" +
+                "Reps: " +
+                userWorkout.get(1).getRepsSet1() + ", " +
+                userWorkout.get(1).getRepsSet2() + ", " +
+                userWorkout.get(1).getRepsSet3() + "\n" +
+                "Time: " + userWorkout.get(1).getCardioTime() + " minutes" +
+                "\n" +
+                "\n" +
+                "Exercise 3: " + userWorkout.get(2).getExerciseName() + "\n" +
+                "Reps: " +
+                userWorkout.get(2).getRepsSet1() + ", " +
+                userWorkout.get(2).getRepsSet2() + ", " +
+                userWorkout.get(2).getRepsSet3() + "\n" +
+                "Time: " + userWorkout.get(2).getCardioTime() + " minutes" +
+                "\n" +
+                "\n" +
+                "Exercise 4: " + userWorkout.get(3).getExerciseName() + "\n" +
+                "Reps: " +
+                userWorkout.get(3).getRepsSet1() + ", " +
+                userWorkout.get(3).getRepsSet2() + ", " +
+                userWorkout.get(3).getRepsSet3() + "\n" +
+                "Time: " + userWorkout.get(3).getCardioTime() + " minutes" +
+                "\n" +
+                "\n" +
+                "Exercise 5: " + userWorkout.get(4).getExerciseName() + "\n" +
+                "Reps: " +
+                userWorkout.get(4).getRepsSet1() + ", " +
+                userWorkout.get(4).getRepsSet2() + ", " +
+                userWorkout.get(4).getRepsSet3() + "\n" +
+                "Time: " + userWorkout.get(4).getCardioTime() + " minutes";
 
         int duration = Toast.LENGTH_LONG;
-        Toast.makeText(this, text, duration).show();
+        Toast toast = Toast.makeText(this, text, duration);
+        toast.setGravity(Gravity.CENTER,0,0);
+        toast.show();
     }
 }
