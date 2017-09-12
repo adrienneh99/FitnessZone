@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -111,6 +112,9 @@ public class WorkoutTrackerActivity extends AppCompatActivity
         spinner3.setOnItemSelectedListener(this);
         spinner4.setOnItemSelectedListener(this);
         spinner5.setOnItemSelectedListener(this);
+
+        Button workoutDateButton = (Button)findViewById(R.id.workout_date_button);
+        workoutDateButton.requestFocus();
     }
 
     // Specify the options menu
@@ -150,28 +154,23 @@ public class WorkoutTrackerActivity extends AppCompatActivity
     // and assign it to the corresponding userWorkout exerciseName
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        if (parent.getId() == R.id.exercise1_spinner1)
-        {
+        if (parent.getId() == R.id.exercise1_spinner1) {
             String spinner1Item = parent.getItemAtPosition(position).toString();
             userWorkout.get(0).setExerciseName(spinner1Item);
         }
-        else if (parent.getId() == R.id.exercise2_spinner2)
-        {
+        else if (parent.getId() == R.id.exercise2_spinner2) {
             String spinner2Item = parent.getItemAtPosition(position).toString();
             userWorkout.get(1).setExerciseName(spinner2Item);
         }
-        else if (parent.getId() == R.id.exercise3_spinner3)
-        {
+        else if (parent.getId() == R.id.exercise3_spinner3) {
             String spinner3Item = parent.getItemAtPosition(position).toString();
             userWorkout.get(2).setExerciseName(spinner3Item);
         }
-        else if (parent.getId() == R.id.exercise4_spinner4)
-        {
+        else if (parent.getId() == R.id.exercise4_spinner4) {
             String spinner4Item = parent.getItemAtPosition(position).toString();
             userWorkout.get(3).setExerciseName(spinner4Item);
         }
-        else if (parent.getId() == R.id.exercise5_spinner5)
-        {
+        else if (parent.getId() == R.id.exercise5_spinner5) {
             String spinner5Item = parent.getItemAtPosition(position).toString();
             userWorkout.get(4).setExerciseName(spinner5Item);
         }
